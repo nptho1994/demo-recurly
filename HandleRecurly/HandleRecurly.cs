@@ -19,6 +19,7 @@ namespace HandleRecurly
         private HandleAccount handleAccount = new HandleAccount();
         private HandlePlan handlePlan = new HandlePlan();
         private HandleSubscription handleSubscription = new HandleSubscription();
+        private HandleCoupon handleCoupon = new HandleCoupon();
         public HandleRecurly()
         {
             InitializeComponent();
@@ -42,6 +43,11 @@ namespace HandleRecurly
         private void btn_CreateSubscription_Click(object sender, EventArgs e)
         {
             rtb_ShowInfo.Text = handleSubscription.CreateSubscription(txt_PlanCode.Text, txt_AccountCode.Text);
+        }
+
+        private void btn_CreateCoupon_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleCoupon.CreateCoupon();
         }
     }
 }

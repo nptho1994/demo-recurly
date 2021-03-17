@@ -30,6 +30,7 @@ namespace HandleRecurly
         private void InitializeComponent()
         {
             this.gb_Setting = new System.Windows.Forms.GroupBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,12 +57,14 @@ namespace HandleRecurly
             this.btn_CreatePlan = new System.Windows.Forms.Button();
             this.gb_Subscription = new System.Windows.Forms.GroupBox();
             this.btn_CreateSubscription = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btn_CreateCoupon = new System.Windows.Forms.Button();
             this.gb_Setting.SuspendLayout();
             this.gb_BillingInfo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gb_Subscription.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_Setting
@@ -90,6 +93,13 @@ namespace HandleRecurly
             this.gb_Setting.TabIndex = 0;
             this.gb_Setting.TabStop = false;
             this.gb_Setting.Text = "Setting";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(635, 69);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(134, 23);
+            this.textBox6.TabIndex = 17;
             // 
             // textBox3
             // 
@@ -230,9 +240,9 @@ namespace HandleRecurly
             // 
             // rtb_ShowInfo
             // 
-            this.rtb_ShowInfo.Location = new System.Drawing.Point(13, 373);
+            this.rtb_ShowInfo.Location = new System.Drawing.Point(12, 420);
             this.rtb_ShowInfo.Name = "rtb_ShowInfo";
-            this.rtb_ShowInfo.Size = new System.Drawing.Size(775, 65);
+            this.rtb_ShowInfo.Size = new System.Drawing.Size(775, 43);
             this.rtb_ShowInfo.TabIndex = 1;
             this.rtb_ShowInfo.Text = "";
             // 
@@ -316,18 +326,32 @@ namespace HandleRecurly
             this.btn_CreateSubscription.UseVisualStyleBackColor = true;
             this.btn_CreateSubscription.Click += new System.EventHandler(this.btn_CreateSubscription_Click);
             // 
-            // textBox6
+            // groupBox3
             // 
-            this.textBox6.Location = new System.Drawing.Point(635, 69);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(134, 23);
-            this.textBox6.TabIndex = 17;
+            this.groupBox3.Controls.Add(this.btn_CreateCoupon);
+            this.groupBox3.Location = new System.Drawing.Point(13, 360);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(775, 54);
+            this.groupBox3.TabIndex = 6;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Coupon";
+            // 
+            // btn_CreateCoupon
+            // 
+            this.btn_CreateCoupon.Location = new System.Drawing.Point(7, 23);
+            this.btn_CreateCoupon.Name = "btn_CreateCoupon";
+            this.btn_CreateCoupon.Size = new System.Drawing.Size(75, 23);
+            this.btn_CreateCoupon.TabIndex = 0;
+            this.btn_CreateCoupon.Text = "Create";
+            this.btn_CreateCoupon.UseVisualStyleBackColor = true;
+            this.btn_CreateCoupon.Click += new System.EventHandler(this.btn_CreateCoupon_Click);
             // 
             // HandleRecurly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 475);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.gb_Subscription);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -342,6 +366,7 @@ namespace HandleRecurly
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.gb_Subscription.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -376,6 +401,8 @@ namespace HandleRecurly
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btn_CreateCoupon;
     }
 }
 
