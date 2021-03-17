@@ -1,0 +1,9 @@
+W:\Lập trình\Demo\HandleRecurly\Recurly\bin\Debug\netstandard2.0\Recurly.deps.json
+W:\Lập trình\Demo\HandleRecurly\Recurly\bin\Debug\netstandard2.0\Recurly.dll
+W:\Lập trình\Demo\HandleRecurly\Recurly\bin\Debug\netstandard2.0\Recurly.pdb
+W:\Lập trình\Demo\HandleRecurly\Recurly\obj\Debug\netstandard2.0\Recurly.csprojAssemblyReference.cache
+W:\Lập trình\Demo\HandleRecurly\Recurly\obj\Debug\netstandard2.0\Recurly.AssemblyInfoInputs.cache
+W:\Lập trình\Demo\HandleRecurly\Recurly\obj\Debug\netstandard2.0\Recurly.AssemblyInfo.cs
+W:\Lập trình\Demo\HandleRecurly\Recurly\obj\Debug\netstandard2.0\Recurly.csproj.CoreCompileInputs.cache
+W:\Lập trình\Demo\HandleRecurly\Recurly\obj\Debug\netstandard2.0\Recurly.dll
+W:\Lập trình\Demo\HandleRecurly\Recurly\obj\Debug\netstandard2.0\Recurly.pdb
