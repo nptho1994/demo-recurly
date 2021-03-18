@@ -37,5 +37,26 @@ namespace HandleRecurly.Resource
             }
 
         }
+
+        public string CancelSubscription(string subscriptionId)
+        {
+            try
+            {
+                Subscription subscription = HandleClient.client.CancelSubscription(subscriptionId);
+                return $"Canceled Subscription {subscription.Uuid}";
+            }
+            catch (Recurly.Errors.Validation ex)
+            {
+                // If the request was not valid, you may want to tell your user
+                // why. You can find the invalid params and reasons in ex.Error.Params
+                return $"Failed validation: {ex.Error.Message}";
+            }
+            catch (Recurly.Errors.ApiError ex)
+            {
+                // Use ApiError to catch a generic error from the API
+                return $"Unexpected Recurly Error: {ex.Error.Message}";
+            }
+
+        }
     }
 }

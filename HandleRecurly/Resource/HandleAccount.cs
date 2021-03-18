@@ -9,16 +9,17 @@ namespace HandleRecurly.Resource
 {
     public class HandleAccount
     {
-        public string CreateAccountWithBillingInfo(string tokenID)
+        public string CreateAccountWithBillingInfo(string tokenID, string accountCode)
         {
             try
             {
                 string index = DateTime.Now.ToString( "MMddHHmm", CultureInfo.InvariantCulture);
+                if (string.IsNullOrWhiteSpace(accountCode)) accountCode = "Tho" + index;
                 var accountReq = new AccountCreate()
                 {
-                    Code = "Tho" + index,
-                    FirstName = "Benjamin",
-                    LastName = "Du Monde",
+                    Code = accountCode,
+                    FirstName = "Nguyen",
+                    LastName = "Tho",
                     Address = new Address()
                     {
                         City = "New Orleans",
@@ -46,6 +47,32 @@ namespace HandleRecurly.Resource
                 // Use ApiError to catch a generic error from the API
                 return $"Unexpected Recurly Error: {ex.Error.Message}";
             }
+        }
+
+        public string GetAccountIdByCode(string accountCode)
+        {
+            var accounts = HandleClient.client.ListAccounts();
+            foreach (Account account in accounts)
+            {
+                if (account.Code == accountCode)
+                    return account.Id;
+            }
+            return string.Empty;
+        }
+
+        public string GetListAccount()
+        {
+            var optionalParams = new ListAccountsParams()
+            {
+                Limit = 200
+            };
+            var accounts = HandleClient.client.ListAccounts(optionalParams);
+            string listCode = string.Empty;
+            foreach (Account account in accounts)
+            {
+                listCode += account.Code + "\t";
+            }
+            return listCode;
         }
     }
 }

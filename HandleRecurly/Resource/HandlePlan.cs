@@ -9,15 +9,16 @@ namespace HandleRecurly.Resource
 {
     public class HandlePlan
     {
-        public string CreatePlan()
+        public string CreatePlan(string ?planCode)
         {
             try
             {
                 string index = DateTime.Now.ToString("MMddHHmm", CultureInfo.InvariantCulture);
+                if (string.IsNullOrWhiteSpace(planCode)) planCode = "plan" + index;                
                 var planReq = new PlanCreate()
                 {
                     Name = "plan" + index,
-                    Code = "plan" + index,
+                    Code = planCode,
                     Currencies = new List<PlanPricing>() {
                     new PlanPricing() {
                         Currency = SettingRecurly.RECURLY_CURRENCE,
@@ -40,6 +41,17 @@ namespace HandleRecurly.Resource
                 return $"Unexpected Recurly Error: {ex.Error.Message}";
             }
 
+        }
+
+        public string GetPlanIdByCode(string planCode)
+        {
+            var plans = HandleClient.client.ListPlans();
+            foreach (Plan plan in plans)
+            {
+                if (planCode == plan.Code)
+                    return plan.Id;
+            }
+            return string.Empty;
         }
     }
 }
