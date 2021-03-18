@@ -30,15 +30,21 @@ namespace HandleRecurly
         private void InitializeComponent()
         {
             this.gb_Setting = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.txt_CouponId = new System.Windows.Forms.TextBox();
             this.txt_CouponCode = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.txt_AccountId = new System.Windows.Forms.TextBox();
             this.txt_AccountCode = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.txt_SubscriptionId = new System.Windows.Forms.TextBox();
             this.txt_PlanId = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txt_PlanCode = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,35 +58,67 @@ namespace HandleRecurly
             this.gb_BillingInfo = new System.Windows.Forms.GroupBox();
             this.btn_GetBillingInfoToken = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_GetListChillAccount = new System.Windows.Forms.Button();
+            this.btn_FetchAccountBalance = new System.Windows.Forms.Button();
+            this.btn_ReActiveAccount = new System.Windows.Forms.Button();
+            this.btn_DeActiveAccount = new System.Windows.Forms.Button();
+            this.btn_UpdateAccount = new System.Windows.Forms.Button();
+            this.btn_FetchAccount = new System.Windows.Forms.Button();
+            this.btn_CreateAccount = new System.Windows.Forms.Button();
+            this.btn_GetList = new System.Windows.Forms.Button();
             this.btn_CreateAccountWithBillingInfo = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_CreatePlan = new System.Windows.Forms.Button();
             this.gb_Subscription = new System.Windows.Forms.GroupBox();
-            this.btn_CancelSubscription = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btn_CreateSubscription = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.btn_CancelSub = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.btn_GetListSubscriptionByAccount = new System.Windows.Forms.Button();
+            this.btn_CancelSubscription = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btn_CreateAccountCoupon = new System.Windows.Forms.Button();
             this.btn_CreateCoupon = new System.Windows.Forms.Button();
-            this.btn_GetList = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btn_FetchAccountNote = new System.Windows.Forms.Button();
+            this.btn_GetListAccountNote = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btn_GetListAccountAccquisitionInfo = new System.Windows.Forms.Button();
+            this.btn_RemoveAccountAccquisitionInfo = new System.Windows.Forms.Button();
+            this.btn_UpdateAccountAccquisitionInfo = new System.Windows.Forms.Button();
+            this.btn_FetchAccountAccquisituin = new System.Windows.Forms.Button();
             this.gb_Setting.SuspendLayout();
             this.gb_BillingInfo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gb_Subscription.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_Setting
             // 
+            this.gb_Setting.Controls.Add(this.textBox3);
             this.gb_Setting.Controls.Add(this.txt_CouponId);
             this.gb_Setting.Controls.Add(this.txt_CouponCode);
+            this.gb_Setting.Controls.Add(this.label10);
             this.gb_Setting.Controls.Add(this.label7);
             this.gb_Setting.Controls.Add(this.label4);
+            this.gb_Setting.Controls.Add(this.textBox4);
             this.gb_Setting.Controls.Add(this.txt_AccountId);
             this.gb_Setting.Controls.Add(this.txt_AccountCode);
+            this.gb_Setting.Controls.Add(this.label11);
             this.gb_Setting.Controls.Add(this.label8);
+            this.gb_Setting.Controls.Add(this.txt_SubscriptionId);
             this.gb_Setting.Controls.Add(this.txt_PlanId);
             this.gb_Setting.Controls.Add(this.label5);
+            this.gb_Setting.Controls.Add(this.label12);
             this.gb_Setting.Controls.Add(this.label9);
             this.gb_Setting.Controls.Add(this.txt_PlanCode);
             this.gb_Setting.Controls.Add(this.label6);
@@ -92,29 +130,45 @@ namespace HandleRecurly
             this.gb_Setting.Controls.Add(this.label1);
             this.gb_Setting.Location = new System.Drawing.Point(13, 12);
             this.gb_Setting.Name = "gb_Setting";
-            this.gb_Setting.Size = new System.Drawing.Size(775, 100);
+            this.gb_Setting.Size = new System.Drawing.Size(915, 100);
             this.gb_Setting.TabIndex = 0;
             this.gb_Setting.TabStop = false;
             this.gb_Setting.Text = "Setting";
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(803, 69);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 23);
+            this.textBox3.TabIndex = 23;
+            // 
             // txt_CouponId
             // 
-            this.txt_CouponId.Location = new System.Drawing.Point(635, 69);
+            this.txt_CouponId.Location = new System.Drawing.Point(605, 69);
             this.txt_CouponId.Name = "txt_CouponId";
-            this.txt_CouponId.Size = new System.Drawing.Size(134, 23);
+            this.txt_CouponId.Size = new System.Drawing.Size(100, 23);
             this.txt_CouponId.TabIndex = 17;
             // 
             // txt_CouponCode
             // 
             this.txt_CouponCode.Location = new System.Drawing.Point(409, 69);
             this.txt_CouponCode.Name = "txt_CouponCode";
-            this.txt_CouponCode.Size = new System.Drawing.Size(150, 23);
+            this.txt_CouponCode.Size = new System.Drawing.Size(120, 23);
             this.txt_CouponCode.TabIndex = 11;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(711, 72);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 15);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "CouponId:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(565, 72);
+            this.label7.Location = new System.Drawing.Point(535, 72);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 15);
             this.label7.TabIndex = 16;
@@ -129,34 +183,57 @@ namespace HandleRecurly
             this.label4.TabIndex = 10;
             this.label4.Text = "CouponCode:";
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(803, 40);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 23);
+            this.textBox4.TabIndex = 21;
+            // 
             // txt_AccountId
             // 
-            this.txt_AccountId.Location = new System.Drawing.Point(635, 40);
+            this.txt_AccountId.Location = new System.Drawing.Point(605, 40);
             this.txt_AccountId.Name = "txt_AccountId";
-            this.txt_AccountId.Size = new System.Drawing.Size(134, 23);
+            this.txt_AccountId.Size = new System.Drawing.Size(100, 23);
             this.txt_AccountId.TabIndex = 15;
             // 
             // txt_AccountCode
             // 
             this.txt_AccountCode.Location = new System.Drawing.Point(409, 40);
             this.txt_AccountCode.Name = "txt_AccountCode";
-            this.txt_AccountCode.Size = new System.Drawing.Size(150, 23);
+            this.txt_AccountCode.Size = new System.Drawing.Size(120, 23);
             this.txt_AccountCode.TabIndex = 9;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(711, 43);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 15);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "AccountId:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(565, 43);
+            this.label8.Location = new System.Drawing.Point(535, 43);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 15);
             this.label8.TabIndex = 14;
             this.label8.Text = "AccountId:";
             // 
+            // txt_SubscriptionId
+            // 
+            this.txt_SubscriptionId.Location = new System.Drawing.Point(803, 11);
+            this.txt_SubscriptionId.Name = "txt_SubscriptionId";
+            this.txt_SubscriptionId.Size = new System.Drawing.Size(100, 23);
+            this.txt_SubscriptionId.TabIndex = 19;
+            // 
             // txt_PlanId
             // 
-            this.txt_PlanId.Location = new System.Drawing.Point(635, 11);
+            this.txt_PlanId.Location = new System.Drawing.Point(605, 11);
             this.txt_PlanId.Name = "txt_PlanId";
-            this.txt_PlanId.Size = new System.Drawing.Size(134, 23);
+            this.txt_PlanId.Size = new System.Drawing.Size(100, 23);
             this.txt_PlanId.TabIndex = 13;
             // 
             // label5
@@ -168,10 +245,19 @@ namespace HandleRecurly
             this.label5.TabIndex = 8;
             this.label5.Text = "AccountCode:";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(711, 14);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(86, 15);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "SubscriptionId:";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(565, 14);
+            this.label9.Location = new System.Drawing.Point(535, 14);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 15);
             this.label9.TabIndex = 12;
@@ -181,7 +267,7 @@ namespace HandleRecurly
             // 
             this.txt_PlanCode.Location = new System.Drawing.Point(409, 11);
             this.txt_PlanCode.Name = "txt_PlanCode";
-            this.txt_PlanCode.Size = new System.Drawing.Size(150, 23);
+            this.txt_PlanCode.Size = new System.Drawing.Size(120, 23);
             this.txt_PlanCode.TabIndex = 7;
             // 
             // label6
@@ -252,7 +338,7 @@ namespace HandleRecurly
             // gb_BillingInfo
             // 
             this.gb_BillingInfo.Controls.Add(this.btn_GetBillingInfoToken);
-            this.gb_BillingInfo.Location = new System.Drawing.Point(13, 120);
+            this.gb_BillingInfo.Location = new System.Drawing.Point(12, 238);
             this.gb_BillingInfo.Name = "gb_BillingInfo";
             this.gb_BillingInfo.Size = new System.Drawing.Size(775, 54);
             this.gb_BillingInfo.TabIndex = 2;
@@ -271,14 +357,103 @@ namespace HandleRecurly
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_GetListChillAccount);
+            this.groupBox1.Controls.Add(this.btn_FetchAccountBalance);
+            this.groupBox1.Controls.Add(this.btn_ReActiveAccount);
+            this.groupBox1.Controls.Add(this.btn_DeActiveAccount);
+            this.groupBox1.Controls.Add(this.btn_UpdateAccount);
+            this.groupBox1.Controls.Add(this.btn_FetchAccount);
+            this.groupBox1.Controls.Add(this.btn_CreateAccount);
             this.groupBox1.Controls.Add(this.btn_GetList);
             this.groupBox1.Controls.Add(this.btn_CreateAccountWithBillingInfo);
-            this.groupBox1.Location = new System.Drawing.Point(12, 180);
+            this.groupBox1.Location = new System.Drawing.Point(12, 118);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(775, 54);
+            this.groupBox1.Size = new System.Drawing.Size(740, 54);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Account";
+            // 
+            // btn_GetListChillAccount
+            // 
+            this.btn_GetListChillAccount.BackColor = System.Drawing.Color.Red;
+            this.btn_GetListChillAccount.Location = new System.Drawing.Point(655, 23);
+            this.btn_GetListChillAccount.Name = "btn_GetListChillAccount";
+            this.btn_GetListChillAccount.Size = new System.Drawing.Size(75, 23);
+            this.btn_GetListChillAccount.TabIndex = 8;
+            this.btn_GetListChillAccount.Text = "ListChill";
+            this.btn_GetListChillAccount.UseVisualStyleBackColor = false;
+            this.btn_GetListChillAccount.Click += new System.EventHandler(this.btn_GetListChillAccount_Click);
+            // 
+            // btn_FetchAccountBalance
+            // 
+            this.btn_FetchAccountBalance.BackColor = System.Drawing.Color.Red;
+            this.btn_FetchAccountBalance.Location = new System.Drawing.Point(574, 23);
+            this.btn_FetchAccountBalance.Name = "btn_FetchAccountBalance";
+            this.btn_FetchAccountBalance.Size = new System.Drawing.Size(75, 23);
+            this.btn_FetchAccountBalance.TabIndex = 7;
+            this.btn_FetchAccountBalance.Text = "F_Balance";
+            this.btn_FetchAccountBalance.UseVisualStyleBackColor = false;
+            this.btn_FetchAccountBalance.Click += new System.EventHandler(this.btn_FetchAccountBalance_Click);
+            // 
+            // btn_ReActiveAccount
+            // 
+            this.btn_ReActiveAccount.Location = new System.Drawing.Point(493, 23);
+            this.btn_ReActiveAccount.Name = "btn_ReActiveAccount";
+            this.btn_ReActiveAccount.Size = new System.Drawing.Size(75, 23);
+            this.btn_ReActiveAccount.TabIndex = 6;
+            this.btn_ReActiveAccount.Text = "ReActive";
+            this.btn_ReActiveAccount.UseVisualStyleBackColor = true;
+            this.btn_ReActiveAccount.Click += new System.EventHandler(this.btn_ReActiveAccount_Click);
+            // 
+            // btn_DeActiveAccount
+            // 
+            this.btn_DeActiveAccount.Location = new System.Drawing.Point(412, 23);
+            this.btn_DeActiveAccount.Name = "btn_DeActiveAccount";
+            this.btn_DeActiveAccount.Size = new System.Drawing.Size(75, 23);
+            this.btn_DeActiveAccount.TabIndex = 5;
+            this.btn_DeActiveAccount.Text = "DeActive";
+            this.btn_DeActiveAccount.UseVisualStyleBackColor = true;
+            this.btn_DeActiveAccount.Click += new System.EventHandler(this.btn_DeActiveAccount_Click);
+            // 
+            // btn_UpdateAccount
+            // 
+            this.btn_UpdateAccount.Location = new System.Drawing.Point(331, 23);
+            this.btn_UpdateAccount.Name = "btn_UpdateAccount";
+            this.btn_UpdateAccount.Size = new System.Drawing.Size(75, 23);
+            this.btn_UpdateAccount.TabIndex = 4;
+            this.btn_UpdateAccount.Text = "Update";
+            this.btn_UpdateAccount.UseVisualStyleBackColor = true;
+            this.btn_UpdateAccount.Click += new System.EventHandler(this.btn_UpdateAccount_Click);
+            // 
+            // btn_FetchAccount
+            // 
+            this.btn_FetchAccount.Location = new System.Drawing.Point(250, 23);
+            this.btn_FetchAccount.Name = "btn_FetchAccount";
+            this.btn_FetchAccount.Size = new System.Drawing.Size(75, 23);
+            this.btn_FetchAccount.TabIndex = 3;
+            this.btn_FetchAccount.Text = "Fetch";
+            this.btn_FetchAccount.UseVisualStyleBackColor = true;
+            this.btn_FetchAccount.Click += new System.EventHandler(this.btn_FetchAccount_Click);
+            // 
+            // btn_CreateAccount
+            // 
+            this.btn_CreateAccount.Location = new System.Drawing.Point(169, 23);
+            this.btn_CreateAccount.Name = "btn_CreateAccount";
+            this.btn_CreateAccount.Size = new System.Drawing.Size(75, 23);
+            this.btn_CreateAccount.TabIndex = 2;
+            this.btn_CreateAccount.Text = "Create";
+            this.btn_CreateAccount.UseVisualStyleBackColor = true;
+            this.btn_CreateAccount.Click += new System.EventHandler(this.btn_CreateAccount_Click);
+            // 
+            // btn_GetList
+            // 
+            this.btn_GetList.Location = new System.Drawing.Point(88, 23);
+            this.btn_GetList.Name = "btn_GetList";
+            this.btn_GetList.Size = new System.Drawing.Size(75, 23);
+            this.btn_GetList.TabIndex = 1;
+            this.btn_GetList.Text = "GetList";
+            this.btn_GetList.UseVisualStyleBackColor = true;
+            this.btn_GetList.Click += new System.EventHandler(this.btn_GetList_Click);
             // 
             // btn_CreateAccountWithBillingInfo
             // 
@@ -293,7 +468,7 @@ namespace HandleRecurly
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btn_CreatePlan);
-            this.groupBox2.Location = new System.Drawing.Point(12, 240);
+            this.groupBox2.Location = new System.Drawing.Point(12, 469);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(775, 54);
             this.groupBox2.TabIndex = 4;
@@ -312,34 +487,136 @@ namespace HandleRecurly
             // 
             // gb_Subscription
             // 
-            this.gb_Subscription.Controls.Add(this.btn_CancelSubscription);
+            this.gb_Subscription.Controls.Add(this.button1);
             this.gb_Subscription.Controls.Add(this.btn_CreateSubscription);
+            this.gb_Subscription.Controls.Add(this.button2);
+            this.gb_Subscription.Controls.Add(this.button3);
+            this.gb_Subscription.Controls.Add(this.button4);
+            this.gb_Subscription.Controls.Add(this.btn_CancelSub);
+            this.gb_Subscription.Controls.Add(this.button6);
+            this.gb_Subscription.Controls.Add(this.button7);
+            this.gb_Subscription.Controls.Add(this.button8);
+            this.gb_Subscription.Controls.Add(this.btn_GetListSubscriptionByAccount);
+            this.gb_Subscription.Controls.Add(this.btn_CancelSubscription);
             this.gb_Subscription.Location = new System.Drawing.Point(12, 300);
             this.gb_Subscription.Name = "gb_Subscription";
-            this.gb_Subscription.Size = new System.Drawing.Size(775, 54);
+            this.gb_Subscription.Size = new System.Drawing.Size(916, 54);
             this.gb_Subscription.TabIndex = 5;
             this.gb_Subscription.TabStop = false;
             this.gb_Subscription.Text = "Subscription";
             // 
-            // btn_CancelSubscription
+            // button1
             // 
-            this.btn_CancelSubscription.Location = new System.Drawing.Point(88, 23);
-            this.btn_CancelSubscription.Name = "btn_CancelSubscription";
-            this.btn_CancelSubscription.Size = new System.Drawing.Size(75, 23);
-            this.btn_CancelSubscription.TabIndex = 1;
-            this.btn_CancelSubscription.Text = "Cancel";
-            this.btn_CancelSubscription.UseVisualStyleBackColor = true;
-            this.btn_CancelSubscription.Click += new System.EventHandler(this.btn_CancelSubscription_Click);
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(817, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "ListChill";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btn_CreateSubscription
             // 
-            this.btn_CreateSubscription.Location = new System.Drawing.Point(7, 23);
+            this.btn_CreateSubscription.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_CreateSubscription.Location = new System.Drawing.Point(169, 23);
             this.btn_CreateSubscription.Name = "btn_CreateSubscription";
             this.btn_CreateSubscription.Size = new System.Drawing.Size(75, 23);
             this.btn_CreateSubscription.TabIndex = 0;
             this.btn_CreateSubscription.Text = "Create";
-            this.btn_CreateSubscription.UseVisualStyleBackColor = true;
+            this.btn_CreateSubscription.UseVisualStyleBackColor = false;
             this.btn_CreateSubscription.Click += new System.EventHandler(this.btn_CreateSubscription_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Red;
+            this.button2.Location = new System.Drawing.Point(736, 23);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "F_Balance";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.Location = new System.Drawing.Point(655, 23);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 15;
+            this.button3.Text = "ReActive";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Red;
+            this.button4.Location = new System.Drawing.Point(574, 23);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "DeActive";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // btn_CancelSub
+            // 
+            this.btn_CancelSub.BackColor = System.Drawing.Color.Red;
+            this.btn_CancelSub.Location = new System.Drawing.Point(88, 23);
+            this.btn_CancelSub.Name = "btn_CancelSub";
+            this.btn_CancelSub.Size = new System.Drawing.Size(75, 23);
+            this.btn_CancelSub.TabIndex = 13;
+            this.btn_CancelSub.Text = "Cancel";
+            this.btn_CancelSub.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Red;
+            this.button6.Location = new System.Drawing.Point(412, 23);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 12;
+            this.button6.Text = "Fetch";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Red;
+            this.button7.Location = new System.Drawing.Point(331, 23);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 11;
+            this.button7.Text = "Create";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Red;
+            this.button8.Location = new System.Drawing.Point(250, 23);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 10;
+            this.button8.Text = "GetList";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // btn_GetListSubscriptionByAccount
+            // 
+            this.btn_GetListSubscriptionByAccount.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_GetListSubscriptionByAccount.Location = new System.Drawing.Point(8, 23);
+            this.btn_GetListSubscriptionByAccount.Name = "btn_GetListSubscriptionByAccount";
+            this.btn_GetListSubscriptionByAccount.Size = new System.Drawing.Size(75, 23);
+            this.btn_GetListSubscriptionByAccount.TabIndex = 9;
+            this.btn_GetListSubscriptionByAccount.Text = "ListByAcc";
+            this.btn_GetListSubscriptionByAccount.UseVisualStyleBackColor = false;
+            this.btn_GetListSubscriptionByAccount.Click += new System.EventHandler(this.btn_GetListSubscriptionByAccount_Click);
+            // 
+            // btn_CancelSubscription
+            // 
+            this.btn_CancelSubscription.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_CancelSubscription.Location = new System.Drawing.Point(493, 23);
+            this.btn_CancelSubscription.Name = "btn_CancelSubscription";
+            this.btn_CancelSubscription.Size = new System.Drawing.Size(75, 23);
+            this.btn_CancelSubscription.TabIndex = 1;
+            this.btn_CancelSubscription.Text = "Cancel";
+            this.btn_CancelSubscription.UseVisualStyleBackColor = false;
+            this.btn_CancelSubscription.Click += new System.EventHandler(this.btn_CancelSubscription_Click);
             // 
             // groupBox3
             // 
@@ -372,21 +649,97 @@ namespace HandleRecurly
             this.btn_CreateCoupon.UseVisualStyleBackColor = true;
             this.btn_CreateCoupon.Click += new System.EventHandler(this.btn_CreateCoupon_Click);
             // 
-            // btn_GetList
+            // groupBox4
             // 
-            this.btn_GetList.Location = new System.Drawing.Point(88, 23);
-            this.btn_GetList.Name = "btn_GetList";
-            this.btn_GetList.Size = new System.Drawing.Size(75, 23);
-            this.btn_GetList.TabIndex = 1;
-            this.btn_GetList.Text = "GetList";
-            this.btn_GetList.UseVisualStyleBackColor = true;
-            this.btn_GetList.Click += new System.EventHandler(this.btn_GetList_Click);
+            this.groupBox4.Controls.Add(this.btn_FetchAccountNote);
+            this.groupBox4.Controls.Add(this.btn_GetListAccountNote);
+            this.groupBox4.Location = new System.Drawing.Point(758, 118);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(170, 54);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "AccountNote";
+            // 
+            // btn_FetchAccountNote
+            // 
+            this.btn_FetchAccountNote.Location = new System.Drawing.Point(88, 23);
+            this.btn_FetchAccountNote.Name = "btn_FetchAccountNote";
+            this.btn_FetchAccountNote.Size = new System.Drawing.Size(75, 23);
+            this.btn_FetchAccountNote.TabIndex = 1;
+            this.btn_FetchAccountNote.Text = "Fetch";
+            this.btn_FetchAccountNote.UseVisualStyleBackColor = true;
+            this.btn_FetchAccountNote.Click += new System.EventHandler(this.btn_FetchAccountNote_Click);
+            // 
+            // btn_GetListAccountNote
+            // 
+            this.btn_GetListAccountNote.Location = new System.Drawing.Point(7, 23);
+            this.btn_GetListAccountNote.Name = "btn_GetListAccountNote";
+            this.btn_GetListAccountNote.Size = new System.Drawing.Size(75, 23);
+            this.btn_GetListAccountNote.TabIndex = 0;
+            this.btn_GetListAccountNote.Text = "GetList";
+            this.btn_GetListAccountNote.UseVisualStyleBackColor = true;
+            this.btn_GetListAccountNote.Click += new System.EventHandler(this.btn_GetListAccountNote_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btn_GetListAccountAccquisitionInfo);
+            this.groupBox5.Controls.Add(this.btn_RemoveAccountAccquisitionInfo);
+            this.groupBox5.Controls.Add(this.btn_UpdateAccountAccquisitionInfo);
+            this.groupBox5.Controls.Add(this.btn_FetchAccountAccquisituin);
+            this.groupBox5.Location = new System.Drawing.Point(12, 178);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(330, 54);
+            this.groupBox5.TabIndex = 9;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "AccountAcquisitionInfo";
+            // 
+            // btn_GetListAccountAccquisitionInfo
+            // 
+            this.btn_GetListAccountAccquisitionInfo.Location = new System.Drawing.Point(250, 23);
+            this.btn_GetListAccountAccquisitionInfo.Name = "btn_GetListAccountAccquisitionInfo";
+            this.btn_GetListAccountAccquisitionInfo.Size = new System.Drawing.Size(75, 23);
+            this.btn_GetListAccountAccquisitionInfo.TabIndex = 3;
+            this.btn_GetListAccountAccquisitionInfo.Text = "GetList";
+            this.btn_GetListAccountAccquisitionInfo.UseVisualStyleBackColor = true;
+            this.btn_GetListAccountAccquisitionInfo.Click += new System.EventHandler(this.btn_GetListAccountAccquisitionInfo_Click);
+            // 
+            // btn_RemoveAccountAccquisitionInfo
+            // 
+            this.btn_RemoveAccountAccquisitionInfo.Location = new System.Drawing.Point(169, 23);
+            this.btn_RemoveAccountAccquisitionInfo.Name = "btn_RemoveAccountAccquisitionInfo";
+            this.btn_RemoveAccountAccquisitionInfo.Size = new System.Drawing.Size(75, 23);
+            this.btn_RemoveAccountAccquisitionInfo.TabIndex = 2;
+            this.btn_RemoveAccountAccquisitionInfo.Text = "Remove";
+            this.btn_RemoveAccountAccquisitionInfo.UseVisualStyleBackColor = true;
+            this.btn_RemoveAccountAccquisitionInfo.Click += new System.EventHandler(this.btn_RemoveAccountAccquisitionInfo_Click);
+            // 
+            // btn_UpdateAccountAccquisitionInfo
+            // 
+            this.btn_UpdateAccountAccquisitionInfo.Location = new System.Drawing.Point(88, 23);
+            this.btn_UpdateAccountAccquisitionInfo.Name = "btn_UpdateAccountAccquisitionInfo";
+            this.btn_UpdateAccountAccquisitionInfo.Size = new System.Drawing.Size(75, 23);
+            this.btn_UpdateAccountAccquisitionInfo.TabIndex = 1;
+            this.btn_UpdateAccountAccquisitionInfo.Text = "Update";
+            this.btn_UpdateAccountAccquisitionInfo.UseVisualStyleBackColor = true;
+            this.btn_UpdateAccountAccquisitionInfo.Click += new System.EventHandler(this.btn_UpdateAccountAccquisitionInfo_Click);
+            // 
+            // btn_FetchAccountAccquisituin
+            // 
+            this.btn_FetchAccountAccquisituin.Location = new System.Drawing.Point(7, 23);
+            this.btn_FetchAccountAccquisituin.Name = "btn_FetchAccountAccquisituin";
+            this.btn_FetchAccountAccquisituin.Size = new System.Drawing.Size(75, 23);
+            this.btn_FetchAccountAccquisituin.TabIndex = 0;
+            this.btn_FetchAccountAccquisituin.Text = "Fetch";
+            this.btn_FetchAccountAccquisituin.UseVisualStyleBackColor = true;
+            this.btn_FetchAccountAccquisituin.Click += new System.EventHandler(this.btn_FetchAccountAcquisitionInfo_Click);
             // 
             // HandleRecurly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 475);
+            this.ClientSize = new System.Drawing.Size(985, 590);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.gb_Subscription);
             this.Controls.Add(this.groupBox2);
@@ -403,6 +756,8 @@ namespace HandleRecurly
             this.groupBox2.ResumeLayout(false);
             this.gb_Subscription.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -442,6 +797,36 @@ namespace HandleRecurly
         private System.Windows.Forms.Button btn_CreateAccountCoupon;
         private System.Windows.Forms.Button btn_CancelSubscription;
         private System.Windows.Forms.Button btn_GetList;
+        private System.Windows.Forms.Button btn_CreateAccount;
+        private System.Windows.Forms.Button btn_FetchAccount;
+        private System.Windows.Forms.Button btn_UpdateAccount;
+        private System.Windows.Forms.Button btn_DeActiveAccount;
+        private System.Windows.Forms.Button btn_ReActiveAccount;
+        private System.Windows.Forms.Button btn_FetchAccountBalance;
+        private System.Windows.Forms.Button btn_GetListChillAccount;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btn_FetchAccountNote;
+        private System.Windows.Forms.Button btn_GetListAccountNote;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button btn_GetListAccountAccquisitionInfo;
+        private System.Windows.Forms.Button btn_RemoveAccountAccquisitionInfo;
+        private System.Windows.Forms.Button btn_UpdateAccountAccquisitionInfo;
+        private System.Windows.Forms.Button btn_FetchAccountAccquisituin;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_CancelSub;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btn_GetListSubscriptionByAccount;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txt_SubscriptionId;
+        private System.Windows.Forms.Label label12;
     }
 }
 

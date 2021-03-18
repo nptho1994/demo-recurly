@@ -58,5 +58,16 @@ namespace HandleRecurly.Resource
             }
 
         }
+
+        public string GetListSubscriptionByAccount(string accountId)
+        {
+            var subscriptions = HandleClient.client.ListAccountSubscriptions(accountId);
+            string listSubscription = string.Empty;
+            foreach (Subscription subscription in subscriptions)
+            {
+                listSubscription += subscription.Id + "\t";
+            }
+            return listSubscription;
+        }
     }
 }

@@ -15,8 +15,11 @@ namespace HandleRecurly
 {
     public partial class HandleRecurly : Form
     {
-        private HandleBillingInfo handleBillingInfo = new HandleBillingInfo();
         private HandleAccount handleAccount = new HandleAccount();
+        private HandleAccountNote handleAccountNote = new HandleAccountNote();
+        private HandleAccountAcquisitionInfo handleAccountAcquisitionInfo = new HandleAccountAcquisitionInfo();
+        private HandleBillingInfo handleBillingInfo = new HandleBillingInfo();
+        
         private HandlePlan handlePlan = new HandlePlan();
         private HandleSubscription handleSubscription = new HandleSubscription();
         private HandleCoupon handleCoupon = new HandleCoupon();
@@ -82,14 +85,84 @@ namespace HandleRecurly
             }
         }
 
-        private void btn_CancelSubscription_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_GetList_Click(object sender, EventArgs e)
         {
             rtb_ShowInfo.Text = handleAccount.GetListAccount();
+        }
+
+        private void btn_CreateAccount_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleAccount.CreateAccount(txt_AccountCode.Text);
+        }
+
+        private void btn_FetchAccount_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleAccount.FetchAccount(txt_AccountId.Text);
+        }
+
+        private void btn_UpdateAccount_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleAccount.UpdateAccount(txt_AccountId.Text, txt_BillingInfoToken.Text);
+        }
+
+        private void btn_DeActiveAccount_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleAccount.DeActiveAccount(txt_AccountId.Text);
+        }
+
+        private void btn_ReActiveAccount_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleAccount.ReActiveAccount(txt_AccountId.Text);
+        }
+
+        private void btn_FetchAccountBalance_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleAccount.FetchAccountBalance(txt_AccountId.Text);
+        }
+
+        private void btn_GetListChillAccount_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleAccount.GetListChillAccount(txt_AccountId.Text);
+        }
+
+        private void btn_GetListAccountNote_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleAccountNote.GetListAccountNote(txt_AccountId.Text);
+        }
+
+        private void btn_FetchAccountNote_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleAccountNote.FetchAccountNote(txt_AccountId.Text);
+        }
+
+        private void btn_FetchAccountAcquisitionInfo_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleAccountAcquisitionInfo.FetchAccountAcquisitionInfo(txt_AccountId.Text);
+        }
+
+        private void btn_UpdateAccountAccquisitionInfo_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleAccountAcquisitionInfo.UpdateAccountAcquisitionInfo(txt_AccountId.Text);
+        }
+
+        private void btn_RemoveAccountAccquisitionInfo_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleAccountAcquisitionInfo.RemoveAccountAcquisitionInfo(txt_AccountId.Text);
+        }
+
+        private void btn_GetListAccountAccquisitionInfo_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleAccountAcquisitionInfo.GetListAccountAcquisitionInfo();
+        }
+
+        private void btn_CancelSubscription_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleSubscription.CancelSubscription(txt_SubscriptionId.Text);
+        }
+
+        private void btn_GetListSubscriptionByAccount_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleSubscription.GetListSubscriptionByAccount(txt_SubscriptionId.Text);
         }
     }
 }

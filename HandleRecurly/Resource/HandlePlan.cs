@@ -9,7 +9,7 @@ namespace HandleRecurly.Resource
 {
     public class HandlePlan
     {
-        public string CreatePlan(string ?planCode)
+        public string CreatePlan(string planCode)
         {
             try
             {
