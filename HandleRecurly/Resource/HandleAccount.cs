@@ -89,17 +89,6 @@ namespace HandleRecurly.Resource
                 var accountReq = new AccountCreate()
                 {
                     Code = accountCode,
-                    FirstName = "Benjamin",
-                    LastName = "Du Monde",
-                    Email = "user@example.com",
-                    Address = new Address()
-                    {
-                        City = "New Orleans",
-                        Region = "LA",
-                        Country = "US",
-                        PostalCode = "70115",
-                        Street1 = "900 Camp St."
-                    }
                 };
                 Account account = HandleClient.client.CreateAccount(accountReq);
                 return $"Created account {account.Code}";
@@ -197,6 +186,11 @@ namespace HandleRecurly.Resource
                     BillingInfo = new BillingInfoCreate
                     {
                         TokenId = tokenID
+                    },
+                    CustomFields = new List<CustomField>()
+                    {
+                        new CustomField() {Name = "string", Value = "string" },
+                        new CustomField() {Name = "string", Value = "string" }
                     }
                 };
                 Account account = HandleClient.client.UpdateAccount(accountId, accountReq);

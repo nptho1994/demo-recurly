@@ -19,16 +19,57 @@ namespace HandleRecurly
         private HandleAccountNote handleAccountNote = new HandleAccountNote();
         private HandleAccountAcquisitionInfo handleAccountAcquisitionInfo = new HandleAccountAcquisitionInfo();
         private HandleBillingInfo handleBillingInfo = new HandleBillingInfo();
+        private CheckFunction checkFunction = new CheckFunction();
         
         private HandlePlan handlePlan = new HandlePlan();
         private HandleSubscription handleSubscription = new HandleSubscription();
         private HandleCoupon handleCoupon = new HandleCoupon();
+        private HandleInvoice handleInvoice = new HandleInvoice();
         public HandleRecurly()
         {
             InitializeComponent();
             this.txt_PlanCode.KeyDown += new KeyEventHandler(txt_PlanCode_KeyDown);
             this.txt_AccountCode.KeyDown += new KeyEventHandler(txt_AccountCode_KeyDown);
             this.txt_CouponCode.KeyDown += new KeyEventHandler(txt_CouponCode_KeyDown);
+            this.txt_SubscriptionId.KeyDown += new KeyEventHandler(txt_SubscriptionId_KeyDown);
+        }
+
+        private void btn_TestFunction_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = checkFunction.GetAccessTokenByScope("read-contact");
+            rtb_ShowInfo.Text += checkFunction.GetContact();
+        }
+
+        private void txt_PlanCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && !string.IsNullOrWhiteSpace(txt_PlanCode.Text))
+            {
+                txt_PlanId.Text = handlePlan.GetPlanIdByCode(txt_PlanCode.Text);
+            }
+        }
+
+        private void txt_AccountCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && !string.IsNullOrWhiteSpace(txt_AccountCode.Text))
+            {
+                txt_AccountId.Text = handleAccount.GetAccountIdByCode(txt_AccountCode.Text);
+            }
+        }
+
+        private void txt_CouponCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && !string.IsNullOrWhiteSpace(txt_CouponCode.Text))
+            {
+                txt_CouponId.Text = handleCoupon.GetCouponIdByCode(txt_CouponCode.Text);
+            }
+        }
+
+        private void txt_SubscriptionId_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && !string.IsNullOrWhiteSpace(txt_AccountId.Text) && !string.IsNullOrWhiteSpace(txt_PlanId.Text))
+            {
+                txt_SubscriptionId.Text = handleSubscription.FetchSubscriptionByPlanAccount(txt_AccountId.Text, txt_PlanId.Text);
+            }
         }
 
         private void btn_GetBillingInfoToken_Click(object sender, EventArgs e)
@@ -59,30 +100,6 @@ namespace HandleRecurly
         private void btn_CreateAccountCoupon_Click(object sender, EventArgs e)
         {
             rtb_ShowInfo.Text = handleCoupon.MapAccountCoupon(txt_CouponId.Text, txt_AccountId.Text);
-        }
-
-        private void txt_PlanCode_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter && !string.IsNullOrWhiteSpace(txt_PlanCode.Text))
-            {
-                txt_PlanId.Text = handlePlan.GetPlanIdByCode(txt_PlanCode.Text);
-            }
-        }
-
-        private void txt_AccountCode_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter && !string.IsNullOrWhiteSpace(txt_AccountCode.Text))
-            {
-                txt_AccountId.Text = handleAccount.GetAccountIdByCode(txt_AccountCode.Text);
-            }
-        }
-
-        private void txt_CouponCode_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter && !string.IsNullOrWhiteSpace(txt_CouponCode.Text))
-            {
-                txt_CouponId.Text = handleCoupon.GetCouponIdByCode(txt_CouponCode.Text);
-            }
         }
 
         private void btn_GetList_Click(object sender, EventArgs e)
@@ -163,6 +180,16 @@ namespace HandleRecurly
         private void btn_GetListSubscriptionByAccount_Click(object sender, EventArgs e)
         {
             rtb_ShowInfo.Text = handleSubscription.GetListSubscriptionByAccount(txt_SubscriptionId.Text);
+        }
+
+        private void btn_CancelPlan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_RefundInvoice_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleInvoice.RefundInvoiceForAccount(txt_AccountId.Text);
         }
     }
 }

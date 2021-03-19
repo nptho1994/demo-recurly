@@ -42,6 +42,10 @@ namespace HandleRecurly.Resource
         {
             try
             {
+                var subReq = new SubscriptionCancel()
+                {
+                   
+                };
                 Subscription subscription = HandleClient.client.CancelSubscription(subscriptionId);
                 return $"Canceled Subscription {subscription.Uuid}";
             }
@@ -68,6 +72,18 @@ namespace HandleRecurly.Resource
                 listSubscription += subscription.Id + "\t";
             }
             return listSubscription;
+        }
+
+        public string FetchSubscriptionByPlanAccount(string accountId, string planId)
+        {
+            var subscriptions = HandleClient.client.ListAccountSubscriptions(accountId);
+            foreach (Subscription subscription in subscriptions)
+            {
+                if (subscription.Plan.Id == planId)
+                    return subscription.Id;
+            }
+            return string.Empty;
+
         }
     }
 }
