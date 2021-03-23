@@ -10,11 +10,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using HandleRecurly.Resource;
+using Recurly.Resources;
 
 namespace HandleRecurly
 {
     public partial class HandleRecurly : Form
-    {
+    {        
+        private HandleSite handleSite = new HandleSite();
         private HandleAccount handleAccount = new HandleAccount();
         private HandleAccountNote handleAccountNote = new HandleAccountNote();
         private HandleAccountAcquisitionInfo handleAccountAcquisitionInfo = new HandleAccountAcquisitionInfo();
@@ -32,6 +34,7 @@ namespace HandleRecurly
             this.txt_AccountCode.KeyDown += new KeyEventHandler(txt_AccountCode_KeyDown);
             this.txt_CouponCode.KeyDown += new KeyEventHandler(txt_CouponCode_KeyDown);
             this.txt_SubscriptionId.KeyDown += new KeyEventHandler(txt_SubscriptionId_KeyDown);
+            this.txt_SiteId.KeyDown += new KeyEventHandler(txt_SiteId_KeyDown);
         }
 
         private void btn_TestFunction_Click(object sender, EventArgs e)
@@ -64,11 +67,25 @@ namespace HandleRecurly
             }
         }
 
+
         private void txt_SubscriptionId_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter && !string.IsNullOrWhiteSpace(txt_AccountId.Text) && !string.IsNullOrWhiteSpace(txt_PlanId.Text))
             {
                 txt_SubscriptionId.Text = handleSubscription.FetchSubscriptionByPlanAccount(txt_AccountId.Text, txt_PlanId.Text);
+            }
+        }
+
+        private void txt_SiteId_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<Site> listSite = handleSite.GetSiteId();
+                txt_SiteId.Text = listSite.FirstOrDefault().Id;
+                foreach (var item in listSite)
+                {
+                    rtb_ShowInfo.Text += item.Subdomain;
+                }
             }
         }
 

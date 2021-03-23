@@ -36,7 +36,7 @@ namespace HandleRecurly
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_SiteId = new System.Windows.Forms.TextBox();
             this.txt_AccountId = new System.Windows.Forms.TextBox();
             this.txt_AccountCode = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -115,7 +115,7 @@ namespace HandleRecurly
             this.gb_Setting.Controls.Add(this.label10);
             this.gb_Setting.Controls.Add(this.label7);
             this.gb_Setting.Controls.Add(this.label4);
-            this.gb_Setting.Controls.Add(this.textBox4);
+            this.gb_Setting.Controls.Add(this.txt_SiteId);
             this.gb_Setting.Controls.Add(this.txt_AccountId);
             this.gb_Setting.Controls.Add(this.txt_AccountCode);
             this.gb_Setting.Controls.Add(this.label11);
@@ -188,12 +188,12 @@ namespace HandleRecurly
             this.label4.TabIndex = 10;
             this.label4.Text = "CouponCode:";
             // 
-            // textBox4
+            // txt_SiteId
             // 
-            this.textBox4.Location = new System.Drawing.Point(803, 40);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 23);
-            this.textBox4.TabIndex = 21;
+            this.txt_SiteId.Location = new System.Drawing.Point(803, 40);
+            this.txt_SiteId.Name = "txt_SiteId";
+            this.txt_SiteId.Size = new System.Drawing.Size(100, 23);
+            this.txt_SiteId.TabIndex = 21;
             // 
             // txt_AccountId
             // 
@@ -214,9 +214,9 @@ namespace HandleRecurly
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(711, 43);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 15);
+            this.label11.Size = new System.Drawing.Size(39, 15);
             this.label11.TabIndex = 20;
-            this.label11.Text = "AccountId:";
+            this.label11.Text = "SiteId:";
             // 
             // label8
             // 
@@ -873,7 +873,7 @@ namespace HandleRecurly
         private System.Windows.Forms.Button btn_GetListSubscriptionByAccount;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txt_SiteId;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txt_SubscriptionId;
         private System.Windows.Forms.Label label12;

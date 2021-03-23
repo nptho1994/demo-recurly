@@ -65,7 +65,7 @@ namespace HandleRecurly.Resource
         {
             var optionalParams = new ListAccountsParams()
             {
-                Email = "willdross@gmail.com",
+                //Email = "willdross@gmail.com",
                 Limit = 200
             };
             var accounts = HandleClient.client.ListAccounts(optionalParams);
@@ -179,6 +179,7 @@ namespace HandleRecurly.Resource
         {
             try
             {
+                string index = DateTime.Now.ToString("MMddHHmm", CultureInfo.InvariantCulture);
                 var accountReq = new AccountUpdate()
                 {
                     FirstName = "Aaron",
@@ -189,8 +190,11 @@ namespace HandleRecurly.Resource
                     },
                     CustomFields = new List<CustomField>()
                     {
-                        new CustomField() {Name = "string", Value = "string" },
-                        new CustomField() {Name = "string", Value = "string" }
+                        new CustomField()
+                        {
+                            Name = "Test_Pet",
+                            Value = index
+                        }
                     }
                 };
                 Account account = HandleClient.client.UpdateAccount(accountId, accountReq);

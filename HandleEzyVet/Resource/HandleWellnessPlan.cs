@@ -14,9 +14,9 @@ namespace HandleEzyVet.Resource
     //          write-wellnessplan
     public class HandleWellnessPlan
     {
-        public string FetchWellnessPlan(string accessToken)
+        public string FetchWellnessPlan(string accessToken, string wellnessPlanId)
         {
-            var client = new RestClient("https://api.trial.ezyvet.com/v2/wellnessplan/1");
+            var client = new RestClient("https://api.trial.ezyvet.com/v2/wellnessplan/" + wellnessPlanId);
             client.Timeout = -1;
             var request = new RestRequest(Method.GET);
             request.AddHeader("Authorization", "Bearer " + accessToken);
@@ -66,7 +66,7 @@ namespace HandleEzyVet.Resource
             request.AddHeader("Authorization", "Bearer " + accessToken);
             IRestResponse response = client.Execute(request);
             return response.Content;
-        }
+        }       
     }
 }
 

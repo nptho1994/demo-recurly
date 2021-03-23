@@ -20,6 +20,7 @@ namespace HandleEzyVet
         HandleContact handleContact = new HandleContact();
         HandleConnection handleConnection = new HandleConnection();
         HandleWellnessPlan handleWellnessPlan = new HandleWellnessPlan();
+        HandelWellnessPlanMembership handelWellnessPlanMembership = new HandelWellnessPlanMembership();
         private void btn_CreateContact_Click(object sender, EventArgs e)
         {
             rtb_ShowEzyVetInfo.Text = handleContact.CreateContact();
@@ -27,12 +28,12 @@ namespace HandleEzyVet
 
         private void btn_UpdateContact_Click(object sender, EventArgs e)
         {
-            rtb_ShowEzyVetInfo.Text = handleContact.UpdateContactById(txt_TestValue.Text);
+            rtb_ShowEzyVetInfo.Text = handleContact.UpdateContactById(txt_TempId.Text);
         }
 
         private void btn_DeleteContact_Click(object sender, EventArgs e)
         {
-            rtb_ShowEzyVetInfo.Text = handleContact.DeleteContactById(txt_TestValue.Text);
+            rtb_ShowEzyVetInfo.Text = handleContact.DeleteContactById(txt_TempId.Text);
         }
 
         private void btn_FetchContact_Click(object sender, EventArgs e)
@@ -49,7 +50,7 @@ namespace HandleEzyVet
 
         private void btn_FetchWellnessPlan_Click(object sender, EventArgs e)
         {
-            rtb_ShowEzyVetInfo.Text = handleWellnessPlan.FetchWellnessPlan(txt_TokenAccess.Text);
+            rtb_ShowEzyVetInfo.Text = handleWellnessPlan.FetchWellnessPlan(txt_TokenAccess.Text, txt_TempId.Text);
         }
 
         private void btn_CreateWellnessPlan_Click(object sender, EventArgs e)
@@ -59,12 +60,32 @@ namespace HandleEzyVet
 
         private void btn_UpdateWellnessPlan_Click(object sender, EventArgs e)
         {
-            rtb_ShowEzyVetInfo.Text = handleWellnessPlan.UpdateWellnessPlan(txt_TokenAccess.Text, txt_TestValue.Text); 
+            rtb_ShowEzyVetInfo.Text = handleWellnessPlan.UpdateWellnessPlan(txt_TokenAccess.Text, txt_TempId.Text); 
         }
 
         private void btn_DeleteWellnessPlan_Click(object sender, EventArgs e)
         {
-            rtb_ShowEzyVetInfo.Text = handleWellnessPlan.DeleteWellnessPlan(txt_TokenAccess.Text, txt_TestValue.Text);
+            rtb_ShowEzyVetInfo.Text = handleWellnessPlan.DeleteWellnessPlan(txt_TokenAccess.Text, txt_TempId.Text);
+        }
+
+        private void btn_FetchWellnessPlanBenefit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_FetchWellnessPlanMembership_Click(object sender, EventArgs e)
+        {
+            rtb_ShowEzyVetInfo.Text = handelWellnessPlanMembership.FetchWellnessPlanMembership(txt_TokenAccess.Text, txt_TempId.Text);
+        }
+
+        private void btn_UpdateWellnessPlanMembership_Click(object sender, EventArgs e)
+        {
+            rtb_ShowEzyVetInfo.Text = handelWellnessPlanMembership.UpdateWellnessPlanMembership(txt_TokenAccess.Text, txt_TempId.Text);
+        }
+
+        private void btn_CreateWellnessPlanMembership_Click(object sender, EventArgs e)
+        {
+            rtb_ShowEzyVetInfo.Text = handelWellnessPlanMembership.UpdateWellnessPlanMembership(txt_TokenAccess.Text, txt_TempId.Text);
         }
     }
 }
