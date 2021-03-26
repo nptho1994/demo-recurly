@@ -7,15 +7,15 @@ namespace HandleRecurly.Resource
 {
     public class HandleSite
     {
-        public List<Site> GetSiteId()
+        public string GetSiteBySub(string subDomain)
         {
             var sites = HandleClient.client.ListSites();
-            List<Site> lstSite = new List<Site>();
             foreach (Site site in sites)
             {
-                lstSite.Add(site);
+                if (site.Subdomain == subDomain)
+                    return site.Id;
             }
-            return lstSite;
+            return string.Empty;
         }
     }
 }

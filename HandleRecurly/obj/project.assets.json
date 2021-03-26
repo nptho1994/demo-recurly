@@ -129,11 +129,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "W:\\Lập trình\\Demo\\HandleRecurly\\HandleRecurly\\HandleRecurly.csproj",
+      "projectUniqueName": "D:\\Demo\\Git\\demo-recurly\\HandleRecurly\\HandleRecurly.csproj",
       "projectName": "HandleRecurly",
-      "projectPath": "W:\\Lập trình\\Demo\\HandleRecurly\\HandleRecurly\\HandleRecurly.csproj",
+      "projectPath": "D:\\Demo\\Git\\demo-recurly\\HandleRecurly\\HandleRecurly.csproj",
       "packagesPath": "C:\\Users\\nptho\\.nuget\\packages\\",
-      "outputPath": "W:\\Lập trình\\Demo\\HandleRecurly\\HandleRecurly\\obj\\",
+      "outputPath": "D:\\Demo\\Git\\demo-recurly\\HandleRecurly\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nptho\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -150,8 +150,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "W:\\Lập trình\\Demo\\HandleRecurly\\Recurly\\Recurly.csproj": {
-              "projectPath": "W:\\Lập trình\\Demo\\HandleRecurly\\Recurly\\Recurly.csproj"
+            "D:\\Demo\\Git\\demo-recurly\\Recurly\\Recurly.csproj": {
+              "projectPath": "D:\\Demo\\Git\\demo-recurly\\Recurly\\Recurly.csproj"
             }
           }
         }
@@ -193,7 +193,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

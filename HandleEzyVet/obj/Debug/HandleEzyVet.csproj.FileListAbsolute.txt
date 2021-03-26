@@ -1,0 +1,15 @@
+D:\Demo\Git\demo-recurly\HandleEzyvet\obj\Debug\HandleEzyVet.csprojAssemblyReference.cache
+D:\Demo\Git\demo-recurly\HandleEzyvet\obj\Debug\HandleEzyVet.HandleEzyVet.resources
+D:\Demo\Git\demo-recurly\HandleEzyvet\obj\Debug\HandleEzyVet.Properties.Resources.resources
+D:\Demo\Git\demo-recurly\HandleEzyvet\obj\Debug\HandleEzyVet.csproj.GenerateResource.cache
+D:\Demo\Git\demo-recurly\HandleEzyvet\obj\Debug\HandleEzyVet.csproj.CoreCompileInputs.cache
+D:\Demo\Git\demo-recurly\HandleEzyvet\bin\Debug\HandleEzyVet.exe.config
+D:\Demo\Git\demo-recurly\HandleEzyvet\bin\Debug\HandleEzyVet.exe
+D:\Demo\Git\demo-recurly\HandleEzyvet\bin\Debug\HandleEzyVet.pdb
+D:\Demo\Git\demo-recurly\HandleEzyvet\bin\Debug\Newtonsoft.Json.dll
+D:\Demo\Git\demo-recurly\HandleEzyvet\bin\Debug\RestSharp.dll
+D:\Demo\Git\demo-recurly\HandleEzyvet\bin\Debug\Newtonsoft.Json.xml
+D:\Demo\Git\demo-recurly\HandleEzyvet\bin\Debug\RestSharp.xml
+D:\Demo\Git\demo-recurly\HandleEzyvet\obj\Debug\HandleEzyVet.csproj.CopyComplete
+D:\Demo\Git\demo-recurly\HandleEzyvet\obj\Debug\HandleEzyVet.exe
+D:\Demo\Git\demo-recurly\HandleEzyvet\obj\Debug\HandleEzyVet.pdb

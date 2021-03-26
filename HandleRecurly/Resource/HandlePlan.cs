@@ -17,7 +17,7 @@ namespace HandleRecurly.Resource
                 if (string.IsNullOrWhiteSpace(planCode)) planCode = "plan" + index;                
                 var planReq = new PlanCreate()
                 {
-                    Name = "plan" + index,
+                    Name = "Basic",
                     Code = planCode,
                     Currencies = new List<PlanPricing>() {
                     new PlanPricing() {

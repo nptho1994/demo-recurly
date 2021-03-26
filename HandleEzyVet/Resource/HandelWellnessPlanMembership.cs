@@ -14,29 +14,47 @@ namespace HandleEzyVet.Resource
     //          write-wellnessplanmembership
     public class HandelWellnessPlanMembership
     {
-        public string FetchWellnessPlanMembership(string accessToken, string wellnessPlanMembershipId)
+        public string Fetch(string accessToken, string wellnessPlanMembershipId)
         {
             var client = new RestClient("https://api.trial.ezyvet.com/v2/wellnessplanmembership");
             client.Timeout = -1;
             var request = new RestRequest(Method.GET);
             request.AddHeader("Authorization", "Bearer " + accessToken);
-            request.AddParameter("id", wellnessPlanMembershipId);
+            if (!string.IsNullOrWhiteSpace(wellnessPlanMembershipId)) request.AddParameter("id", wellnessPlanMembershipId);
             IRestResponse response = client.Execute(request);
+            WellnessPlanMembershipResponse wellnessPlanMemberships = JsonConvert.DeserializeObject<WellnessPlanMembershipResponse>(response.Content);
+
+            if (wellnessPlanMemberships.items.Count > 1)
+            {
+                string result = string.Empty;
+                foreach (var item in wellnessPlanMemberships.items)
+                {
+                    result += item.wellnessplanmembership.id.ToString() + "\t";
+                }
+                return result;
+            }
             return response.Content;
         }
 
-        public string CreateWellnessPlanMembership(string accessToken)
+        public string Create(string accessToken, string wellnessPlanId, string contactId, string animalId)
         {
             var client = new RestClient("https://api.trial.ezyvet.com/v2/wellnessplanmembership");
             client.Timeout = -1;
             var request = new RestRequest(Method.POST);
             request.AddHeader("Authorization", "Bearer " + accessToken);
-            WellnessPlanMembershipUpdate wellnessPlanMembershipUpdate = new WellnessPlanMembershipUpdate();
-            //wellnessPlanMembershipUpdate.id = Int32.Parse(wellnessPlanMembershipId);
-            wellnessPlanMembershipUpdate.status = "Active";
-            wellnessPlanMembershipUpdate.reference = "RefNo:124585";
+            string index = DateTime.Now.ToString("MMddHHmm", CultureInfo.InvariantCulture);
+            Wellnessplanmembership wellnessPlanMembership = new Wellnessplanmembership();
+            wellnessPlanMembership.reference = "wellnessPlanMembership " + index;
+            wellnessPlanMembership.animal_id = Int32.Parse(animalId);
+            wellnessPlanMembership.wellness_plan = Int32.Parse(wellnessPlanId);
+            wellnessPlanMembership.billing_interval = 1;
+            wellnessPlanMembership.start_date = 1560394723;
+            //int test = DateTime.Now.Millisecond;
+            //wellnessPlanMembership.start_date = test;
+            wellnessPlanMembership.resource_id = 1;
+            wellnessPlanMembership.ownership_id = 1;
             string contactString = JsonConvert.SerializeObject(
-                wellnessPlanMembershipUpdate,
+                wellnessPlanMembership,
                 Newtonsoft.Json.Formatting.None,
                 new JsonSerializerSettings
                 {
@@ -49,15 +67,16 @@ namespace HandleEzyVet.Resource
             return response.Content;
         }
 
-        public string UpdateWellnessPlanMembership(string accessToken, string wellnessPlanMembershipId)
+        public string Update(string accessToken, string wellnessPlanMembershipId)
         {
             var client = new RestClient("https://api.trial.ezyvet.com/v2/wellnessplanmembership");
             client.Timeout = -1;
             var request = new RestRequest(Method.PATCH);
             request.AddHeader("Authorization", "Bearer " + accessToken);
-            WellnessPlanMembershipUpdate wellnessPlanMembershipUpdate = new WellnessPlanMembershipUpdate();
+            Wellnessplanmembership wellnessPlanMembershipUpdate = new Wellnessplanmembership();
             wellnessPlanMembershipUpdate.id = Int32.Parse(wellnessPlanMembershipId);
-            wellnessPlanMembershipUpdate.status = "Active";
+            wellnessPlanMembershipUpdate.status = "Cancelled";
+            wellnessPlanMembershipUpdate.wellness_plan = 161;
             wellnessPlanMembershipUpdate.reference = "RefNo:124585";
             string contactString = JsonConvert.SerializeObject(
                 wellnessPlanMembershipUpdate,

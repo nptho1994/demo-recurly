@@ -19,3 +19,24 @@ W:\Lập trình\Demo\HandleRecurly\HandleRecurly\obj\Debug\netcoreapp3.1\HandleR
 W:\Lập trình\Demo\HandleRecurly\HandleRecurly\bin\Debug\netcoreapp3.1\RestSharp.Serializers.Newtonsoft.Json.dll
 W:\Lập trình\Demo\HandleRecurly\HandleRecurly\bin\Debug\netcoreapp3.1\Recurly.dll
 W:\Lập trình\Demo\HandleRecurly\HandleRecurly\bin\Debug\netcoreapp3.1\Recurly.pdb
+D:\Demo\Git\demo-recurly\HandleRecurly\bin\Debug\netcoreapp3.1\HandleRecurly.exe
+D:\Demo\Git\demo-recurly\HandleRecurly\bin\Debug\netcoreapp3.1\HandleRecurly.deps.json
+D:\Demo\Git\demo-recurly\HandleRecurly\bin\Debug\netcoreapp3.1\HandleRecurly.runtimeconfig.json
+D:\Demo\Git\demo-recurly\HandleRecurly\bin\Debug\netcoreapp3.1\HandleRecurly.runtimeconfig.dev.json
+D:\Demo\Git\demo-recurly\HandleRecurly\bin\Debug\netcoreapp3.1\HandleRecurly.dll
+D:\Demo\Git\demo-recurly\HandleRecurly\bin\Debug\netcoreapp3.1\HandleRecurly.pdb
+D:\Demo\Git\demo-recurly\HandleRecurly\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Demo\Git\demo-recurly\HandleRecurly\bin\Debug\netcoreapp3.1\RestSharp.dll
+D:\Demo\Git\demo-recurly\HandleRecurly\bin\Debug\netcoreapp3.1\RestSharp.Serializers.Newtonsoft.Json.dll
+D:\Demo\Git\demo-recurly\HandleRecurly\bin\Debug\netcoreapp3.1\Recurly.dll
+D:\Demo\Git\demo-recurly\HandleRecurly\bin\Debug\netcoreapp3.1\Recurly.pdb
+D:\Demo\Git\demo-recurly\HandleRecurly\obj\Debug\netcoreapp3.1\HandleRecurly.csprojAssemblyReference.cache
+D:\Demo\Git\demo-recurly\HandleRecurly\obj\Debug\netcoreapp3.1\HandleRecurly.HandleRecurly.resources
+D:\Demo\Git\demo-recurly\HandleRecurly\obj\Debug\netcoreapp3.1\HandleRecurly.csproj.GenerateResource.cache
+D:\Demo\Git\demo-recurly\HandleRecurly\obj\Debug\netcoreapp3.1\HandleRecurly.AssemblyInfoInputs.cache
+D:\Demo\Git\demo-recurly\HandleRecurly\obj\Debug\netcoreapp3.1\HandleRecurly.AssemblyInfo.cs
+D:\Demo\Git\demo-recurly\HandleRecurly\obj\Debug\netcoreapp3.1\HandleRecurly.csproj.CoreCompileInputs.cache
+D:\Demo\Git\demo-recurly\HandleRecurly\obj\Debug\netcoreapp3.1\HandleRecurly.csproj.CopyComplete
+D:\Demo\Git\demo-recurly\HandleRecurly\obj\Debug\netcoreapp3.1\HandleRecurly.dll
+D:\Demo\Git\demo-recurly\HandleRecurly\obj\Debug\netcoreapp3.1\HandleRecurly.pdb
+D:\Demo\Git\demo-recurly\HandleRecurly\obj\Debug\netcoreapp3.1\HandleRecurly.genruntimeconfig.cache

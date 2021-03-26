@@ -12,23 +12,28 @@ namespace HandleEzyVet.Resource
 {
     public class HandleContact
     {
-		public string FetchContact()
+		public string FetchContact(string accessToken, string Id)
         {
-			var client = new RestClient("https://api.trial.ezyvet.com/v1/contact?limit=1");
+			string query = string.Empty;
+			if (!string.IsNullOrWhiteSpace(Id))
+            {
+				query = "&id=" + Id;
+            }
+			var client = new RestClient("https://api.trial.ezyvet.com/v1/contact?limit=1"+ query);
 			client.Timeout = -1;
 			var request = new RestRequest(Method.GET);
 			request.AddHeader("Content-Type", "application/merge-patch+json");
-			request.AddHeader("Authorization", "Bearer 9hgjywbyqp2cW7RGp95h5B82aEZegpYdEkhA3TBX");
+			request.AddHeader("Authorization", "Bearer " + accessToken);
 			IRestResponse response = client.Execute(request);
 			return response.Content;
 		}
 
-        public string CreateContact()
+        public string CreateContact(string accessToken)
         {
 			var client = new RestClient("https://api.trial.ezyvet.com/v1/contact");
 			client.Timeout = -1;
 			var request = new RestRequest(Method.POST);
-			request.AddHeader("Authorization", "Bearer NCn6QA4z1h7rVzkKwV87oViv4Quqi2vBfwGDsLBe");
+			request.AddHeader("Authorization", "Bearer " + accessToken);
 			request.AddHeader("Content-Type", "application/json");
 
 			Contact createContact = new Contact();
@@ -52,19 +57,26 @@ namespace HandleEzyVet.Resource
 			};
 			//createContact.address_physical = "123";
 			createContact.stop_credit = "WARNING";
-			string contactString = JsonConvert.SerializeObject(createContact);
+			string contactString = JsonConvert.SerializeObject(
+			   createContact,
+			   Newtonsoft.Json.Formatting.None,
+			   new JsonSerializerSettings
+			   {
+				   NullValueHandling = NullValueHandling.Ignore
+			   }
+			);
 			request.AddParameter("application/json", contactString, ParameterType.RequestBody);
 			IRestResponse response = client.Execute(request);
 			return response.Content;
 		}
 
-		public string UpdateContactById(string id)
+		public string UpdateContactById(string accessToken, string id)
         {
 			var client = new RestClient("https://api.trial.ezyvet.com/v1/contact/" + id);
 			client.Timeout = -1;
 			var request = new RestRequest(Method.PATCH);
 			request.AddHeader("Content-Type", "application/merge-patch+json");
-			request.AddHeader("Authorization", "Bearer YgNFogYK257bUxmGdPo6kg5v408yyGRVMH0CSpIB");
+			request.AddHeader("Authorization", "Bearer " + accessToken);
 			Contact createContact = new Contact();
 			createContact.first_name = "NguyenTest";
 			createContact.last_name = "ThoTest";
@@ -97,12 +109,12 @@ namespace HandleEzyVet.Resource
 			return response.Content;
 		}
 
-		public string DeleteContactById(string id)
+		public string DeleteContactById(string accessToken, string id)
         {
 			var client = new RestClient("https://api.trial.ezyvet.com/v1/contact/19206");
 			client.Timeout = -1;
 			var request = new RestRequest(Method.DELETE);
-			request.AddHeader("Authorization", "Bearer NCn6QA4z1h7rVzkKwV87oViv4Quqi2vBfwGDsLBe");
+			request.AddHeader("Authorization", "Bearer " + accessToken);
 			IRestResponse response = client.Execute(request);
 			return response.Content;
 		}

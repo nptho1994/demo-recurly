@@ -22,7 +22,8 @@ namespace HandleRecurly
         private HandleAccountAcquisitionInfo handleAccountAcquisitionInfo = new HandleAccountAcquisitionInfo();
         private HandleBillingInfo handleBillingInfo = new HandleBillingInfo();
         private CheckFunction checkFunction = new CheckFunction();
-        
+        private HandlePurchase handlePurchase = new HandlePurchase();
+
         private HandlePlan handlePlan = new HandlePlan();
         private HandleSubscription handleSubscription = new HandleSubscription();
         private HandleCoupon handleCoupon = new HandleCoupon();
@@ -34,13 +35,10 @@ namespace HandleRecurly
             this.txt_AccountCode.KeyDown += new KeyEventHandler(txt_AccountCode_KeyDown);
             this.txt_CouponCode.KeyDown += new KeyEventHandler(txt_CouponCode_KeyDown);
             this.txt_SubscriptionId.KeyDown += new KeyEventHandler(txt_SubscriptionId_KeyDown);
-            this.txt_SiteId.KeyDown += new KeyEventHandler(txt_SiteId_KeyDown);
         }
 
         private void btn_TestFunction_Click(object sender, EventArgs e)
         {
-            rtb_ShowInfo.Text = checkFunction.GetAccessTokenByScope("read-contact");
-            rtb_ShowInfo.Text += checkFunction.GetContact();
         }
 
         private void txt_PlanCode_KeyDown(object sender, KeyEventArgs e)
@@ -73,19 +71,6 @@ namespace HandleRecurly
             if (e.KeyCode == Keys.Enter && !string.IsNullOrWhiteSpace(txt_AccountId.Text) && !string.IsNullOrWhiteSpace(txt_PlanId.Text))
             {
                 txt_SubscriptionId.Text = handleSubscription.FetchSubscriptionByPlanAccount(txt_AccountId.Text, txt_PlanId.Text);
-            }
-        }
-
-        private void txt_SiteId_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                List<Site> listSite = handleSite.GetSiteId();
-                txt_SiteId.Text = listSite.FirstOrDefault().Id;
-                foreach (var item in listSite)
-                {
-                    rtb_ShowInfo.Text += item.Subdomain;
-                }
             }
         }
 
@@ -196,7 +181,7 @@ namespace HandleRecurly
 
         private void btn_GetListSubscriptionByAccount_Click(object sender, EventArgs e)
         {
-            rtb_ShowInfo.Text = handleSubscription.GetListSubscriptionByAccount(txt_SubscriptionId.Text);
+            rtb_ShowInfo.Text = handleSubscription.GetListSubscriptionByAccount(txt_AccountId.Text);
         }
 
         private void btn_CancelPlan_Click(object sender, EventArgs e)
@@ -207,6 +192,31 @@ namespace HandleRecurly
         private void btn_RefundInvoice_Click(object sender, EventArgs e)
         {
             rtb_ShowInfo.Text = handleInvoice.RefundInvoiceForAccount(txt_AccountId.Text);
+        }
+
+        private void btn_CreatePurchase_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handlePurchase.Create(txt_AccountCode.Text, txt_BillingInfoToken.Text, txt_PlanCode.Text);
+        }
+
+        private void btn_GetSite_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleSite.GetSiteBySub(txt_TempId1.Text);
+        }
+
+        private void btn_Preview_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handlePurchase.Preview(txt_AccountCode.Text, txt_BillingInfoToken.Text, txt_PlanCode.Text);
+        }
+
+        private void btn_GetListBillingInfo_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleBillingInfo.GetBillingInfo(txt_AccountId.Text);
+        }
+
+        private void btn_GetSubcriptionById_Click(object sender, EventArgs e)
+        {
+            rtb_ShowInfo.Text = handleSubscription.FetchSubscription(txt_SubscriptionId.Text);
         }
     }
 }

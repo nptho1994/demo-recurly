@@ -242,7 +242,6 @@ namespace Recurly
                 var invalidKeys = string.Join(", ", invalidParams.Select(x => x.Key).ToArray());
                 throw new RecurlyError($"{invalidKeys} cannot be an empty value");
             }
-
         }
 
         protected string InterpolatePath(string path, Dictionary<string, object> urlParams)

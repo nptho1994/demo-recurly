@@ -1,0 +1,15 @@
+D:\Demo\Git\demo-recurly\Connect\bin\Debug\Connect.exe.config
+D:\Demo\Git\demo-recurly\Connect\bin\Debug\Connect.exe
+D:\Demo\Git\demo-recurly\Connect\bin\Debug\Connect.pdb
+D:\Demo\Git\demo-recurly\Connect\bin\Debug\Newtonsoft.Json.dll
+D:\Demo\Git\demo-recurly\Connect\bin\Debug\RestSharp.dll
+D:\Demo\Git\demo-recurly\Connect\bin\Debug\Newtonsoft.Json.xml
+D:\Demo\Git\demo-recurly\Connect\bin\Debug\RestSharp.xml
+D:\Demo\Git\demo-recurly\Connect\obj\Debug\Connect.csprojAssemblyReference.cache
+D:\Demo\Git\demo-recurly\Connect\obj\Debug\HandleEzyVet.HandleEzyVet.resources
+D:\Demo\Git\demo-recurly\Connect\obj\Debug\Connect.Properties.Resources.resources
+D:\Demo\Git\demo-recurly\Connect\obj\Debug\Connect.csproj.GenerateResource.cache
+D:\Demo\Git\demo-recurly\Connect\obj\Debug\Connect.csproj.CoreCompileInputs.cache
+D:\Demo\Git\demo-recurly\Connect\obj\Debug\Connect.csproj.CopyComplete
+D:\Demo\Git\demo-recurly\Connect\obj\Debug\Connect.exe
+D:\Demo\Git\demo-recurly\Connect\obj\Debug\Connect.pdb

@@ -30,13 +30,13 @@ namespace HandleRecurly
         private void InitializeComponent()
         {
             this.gb_Setting = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txt_TempId2 = new System.Windows.Forms.TextBox();
             this.txt_CouponId = new System.Windows.Forms.TextBox();
             this.txt_CouponCode = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_SiteId = new System.Windows.Forms.TextBox();
+            this.txt_TempId1 = new System.Windows.Forms.TextBox();
             this.txt_AccountId = new System.Windows.Forms.TextBox();
             this.txt_AccountCode = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -56,6 +56,7 @@ namespace HandleRecurly
             this.label1 = new System.Windows.Forms.Label();
             this.rtb_ShowInfo = new System.Windows.Forms.RichTextBox();
             this.gb_BillingInfo = new System.Windows.Forms.GroupBox();
+            this.btn_GetListBillingInfo = new System.Windows.Forms.Button();
             this.btn_GetBillingInfoToken = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_GetListChillAccount = new System.Windows.Forms.Button();
@@ -79,7 +80,7 @@ namespace HandleRecurly
             this.btn_CancelSub = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btn_GetSubcriptionById = new System.Windows.Forms.Button();
             this.btn_GetListSubscriptionByAccount = new System.Windows.Forms.Button();
             this.btn_CancelSubscription = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -96,6 +97,11 @@ namespace HandleRecurly
             this.btn_TestFunction = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.btn_RefundInvoice = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btn_Preview = new System.Windows.Forms.Button();
+            this.btn_CreatePurchase = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.btn_GetSite = new System.Windows.Forms.Button();
             this.gb_Setting.SuspendLayout();
             this.gb_BillingInfo.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -105,17 +111,19 @@ namespace HandleRecurly
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_Setting
             // 
-            this.gb_Setting.Controls.Add(this.textBox3);
+            this.gb_Setting.Controls.Add(this.txt_TempId2);
             this.gb_Setting.Controls.Add(this.txt_CouponId);
             this.gb_Setting.Controls.Add(this.txt_CouponCode);
             this.gb_Setting.Controls.Add(this.label10);
             this.gb_Setting.Controls.Add(this.label7);
             this.gb_Setting.Controls.Add(this.label4);
-            this.gb_Setting.Controls.Add(this.txt_SiteId);
+            this.gb_Setting.Controls.Add(this.txt_TempId1);
             this.gb_Setting.Controls.Add(this.txt_AccountId);
             this.gb_Setting.Controls.Add(this.txt_AccountCode);
             this.gb_Setting.Controls.Add(this.label11);
@@ -140,12 +148,12 @@ namespace HandleRecurly
             this.gb_Setting.TabStop = false;
             this.gb_Setting.Text = "Setting";
             // 
-            // textBox3
+            // txt_TempId2
             // 
-            this.textBox3.Location = new System.Drawing.Point(803, 69);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 23;
+            this.txt_TempId2.Location = new System.Drawing.Point(803, 69);
+            this.txt_TempId2.Name = "txt_TempId2";
+            this.txt_TempId2.Size = new System.Drawing.Size(100, 23);
+            this.txt_TempId2.TabIndex = 23;
             // 
             // txt_CouponId
             // 
@@ -166,9 +174,9 @@ namespace HandleRecurly
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(711, 72);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 15);
+            this.label10.Size = new System.Drawing.Size(58, 15);
             this.label10.TabIndex = 22;
-            this.label10.Text = "CouponId:";
+            this.label10.Text = "TempId 2:";
             // 
             // label7
             // 
@@ -188,12 +196,12 @@ namespace HandleRecurly
             this.label4.TabIndex = 10;
             this.label4.Text = "CouponCode:";
             // 
-            // txt_SiteId
+            // txt_TempId1
             // 
-            this.txt_SiteId.Location = new System.Drawing.Point(803, 40);
-            this.txt_SiteId.Name = "txt_SiteId";
-            this.txt_SiteId.Size = new System.Drawing.Size(100, 23);
-            this.txt_SiteId.TabIndex = 21;
+            this.txt_TempId1.Location = new System.Drawing.Point(803, 40);
+            this.txt_TempId1.Name = "txt_TempId1";
+            this.txt_TempId1.Size = new System.Drawing.Size(100, 23);
+            this.txt_TempId1.TabIndex = 21;
             // 
             // txt_AccountId
             // 
@@ -214,9 +222,9 @@ namespace HandleRecurly
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(711, 43);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(39, 15);
+            this.label11.Size = new System.Drawing.Size(58, 15);
             this.label11.TabIndex = 20;
-            this.label11.Text = "SiteId:";
+            this.label11.Text = "Templd 1:";
             // 
             // label8
             // 
@@ -334,21 +342,32 @@ namespace HandleRecurly
             // 
             // rtb_ShowInfo
             // 
-            this.rtb_ShowInfo.Location = new System.Drawing.Point(12, 420);
+            this.rtb_ShowInfo.Location = new System.Drawing.Point(12, 360);
             this.rtb_ShowInfo.Name = "rtb_ShowInfo";
-            this.rtb_ShowInfo.Size = new System.Drawing.Size(775, 43);
+            this.rtb_ShowInfo.Size = new System.Drawing.Size(916, 137);
             this.rtb_ShowInfo.TabIndex = 1;
             this.rtb_ShowInfo.Text = "";
             // 
             // gb_BillingInfo
             // 
+            this.gb_BillingInfo.Controls.Add(this.btn_GetListBillingInfo);
             this.gb_BillingInfo.Controls.Add(this.btn_GetBillingInfoToken);
-            this.gb_BillingInfo.Location = new System.Drawing.Point(12, 238);
+            this.gb_BillingInfo.Location = new System.Drawing.Point(404, 238);
             this.gb_BillingInfo.Name = "gb_BillingInfo";
-            this.gb_BillingInfo.Size = new System.Drawing.Size(775, 54);
+            this.gb_BillingInfo.Size = new System.Drawing.Size(268, 54);
             this.gb_BillingInfo.TabIndex = 2;
             this.gb_BillingInfo.TabStop = false;
             this.gb_BillingInfo.Text = "Billing Info";
+            // 
+            // btn_GetListBillingInfo
+            // 
+            this.btn_GetListBillingInfo.Location = new System.Drawing.Point(88, 22);
+            this.btn_GetListBillingInfo.Name = "btn_GetListBillingInfo";
+            this.btn_GetListBillingInfo.Size = new System.Drawing.Size(75, 23);
+            this.btn_GetListBillingInfo.TabIndex = 1;
+            this.btn_GetListBillingInfo.Text = "GetList";
+            this.btn_GetListBillingInfo.UseVisualStyleBackColor = true;
+            this.btn_GetListBillingInfo.Click += new System.EventHandler(this.btn_GetListBillingInfo_Click);
             // 
             // btn_GetBillingInfoToken
             // 
@@ -474,9 +493,9 @@ namespace HandleRecurly
             // 
             this.groupBox2.Controls.Add(this.btn_CancelPlan);
             this.groupBox2.Controls.Add(this.btn_CreatePlan);
-            this.groupBox2.Location = new System.Drawing.Point(12, 469);
+            this.groupBox2.Location = new System.Drawing.Point(12, 238);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(775, 54);
+            this.groupBox2.Size = new System.Drawing.Size(180, 54);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Plan";
@@ -512,7 +531,7 @@ namespace HandleRecurly
             this.gb_Subscription.Controls.Add(this.btn_CancelSub);
             this.gb_Subscription.Controls.Add(this.button6);
             this.gb_Subscription.Controls.Add(this.button7);
-            this.gb_Subscription.Controls.Add(this.button8);
+            this.gb_Subscription.Controls.Add(this.btn_GetSubcriptionById);
             this.gb_Subscription.Controls.Add(this.btn_GetListSubscriptionByAccount);
             this.gb_Subscription.Controls.Add(this.btn_CancelSubscription);
             this.gb_Subscription.Location = new System.Drawing.Point(12, 300);
@@ -603,15 +622,16 @@ namespace HandleRecurly
             this.button7.Text = "Create";
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // btn_GetSubcriptionById
             // 
-            this.button8.BackColor = System.Drawing.Color.Red;
-            this.button8.Location = new System.Drawing.Point(250, 23);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "GetList";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btn_GetSubcriptionById.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_GetSubcriptionById.Location = new System.Drawing.Point(250, 23);
+            this.btn_GetSubcriptionById.Name = "btn_GetSubcriptionById";
+            this.btn_GetSubcriptionById.Size = new System.Drawing.Size(75, 23);
+            this.btn_GetSubcriptionById.TabIndex = 10;
+            this.btn_GetSubcriptionById.Text = "Fetch";
+            this.btn_GetSubcriptionById.UseVisualStyleBackColor = false;
+            this.btn_GetSubcriptionById.Click += new System.EventHandler(this.btn_GetSubcriptionById_Click);
             // 
             // btn_GetListSubscriptionByAccount
             // 
@@ -639,9 +659,9 @@ namespace HandleRecurly
             // 
             this.groupBox3.Controls.Add(this.btn_CreateAccountCoupon);
             this.groupBox3.Controls.Add(this.btn_CreateCoupon);
-            this.groupBox3.Location = new System.Drawing.Point(13, 360);
+            this.groupBox3.Location = new System.Drawing.Point(625, 180);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(775, 54);
+            this.groupBox3.Size = new System.Drawing.Size(179, 54);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Coupon";
@@ -763,9 +783,9 @@ namespace HandleRecurly
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.btn_RefundInvoice);
-            this.groupBox6.Location = new System.Drawing.Point(12, 529);
+            this.groupBox6.Location = new System.Drawing.Point(198, 238);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(775, 54);
+            this.groupBox6.Size = new System.Drawing.Size(93, 54);
             this.groupBox6.TabIndex = 5;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Invoice";
@@ -780,11 +800,64 @@ namespace HandleRecurly
             this.btn_RefundInvoice.UseVisualStyleBackColor = true;
             this.btn_RefundInvoice.Click += new System.EventHandler(this.btn_RefundInvoice_Click);
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.btn_Preview);
+            this.groupBox7.Controls.Add(this.btn_CreatePurchase);
+            this.groupBox7.Location = new System.Drawing.Point(348, 178);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(170, 54);
+            this.groupBox7.TabIndex = 7;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Purchase";
+            // 
+            // btn_Preview
+            // 
+            this.btn_Preview.Location = new System.Drawing.Point(88, 23);
+            this.btn_Preview.Name = "btn_Preview";
+            this.btn_Preview.Size = new System.Drawing.Size(75, 23);
+            this.btn_Preview.TabIndex = 1;
+            this.btn_Preview.Text = "Preview";
+            this.btn_Preview.UseVisualStyleBackColor = true;
+            this.btn_Preview.Click += new System.EventHandler(this.btn_Preview_Click);
+            // 
+            // btn_CreatePurchase
+            // 
+            this.btn_CreatePurchase.Location = new System.Drawing.Point(7, 23);
+            this.btn_CreatePurchase.Name = "btn_CreatePurchase";
+            this.btn_CreatePurchase.Size = new System.Drawing.Size(75, 23);
+            this.btn_CreatePurchase.TabIndex = 0;
+            this.btn_CreatePurchase.Text = "Create";
+            this.btn_CreatePurchase.UseVisualStyleBackColor = true;
+            this.btn_CreatePurchase.Click += new System.EventHandler(this.btn_CreatePurchase_Click);
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.btn_GetSite);
+            this.groupBox8.Location = new System.Drawing.Point(297, 238);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(93, 54);
+            this.groupBox8.TabIndex = 6;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Site";
+            // 
+            // btn_GetSite
+            // 
+            this.btn_GetSite.Location = new System.Drawing.Point(7, 23);
+            this.btn_GetSite.Name = "btn_GetSite";
+            this.btn_GetSite.Size = new System.Drawing.Size(75, 23);
+            this.btn_GetSite.TabIndex = 0;
+            this.btn_GetSite.Text = "Get";
+            this.btn_GetSite.UseVisualStyleBackColor = true;
+            this.btn_GetSite.Click += new System.EventHandler(this.btn_GetSite_Click);
+            // 
             // HandleRecurly
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(985, 590);
+            this.ClientSize = new System.Drawing.Size(939, 506);
+            this.Controls.Add(this.groupBox8);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.btn_TestFunction);
             this.Controls.Add(this.groupBox5);
@@ -808,6 +881,8 @@ namespace HandleRecurly
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -869,11 +944,11 @@ namespace HandleRecurly
         private System.Windows.Forms.Button btn_CancelSub;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btn_GetSubcriptionById;
         private System.Windows.Forms.Button btn_GetListSubscriptionByAccount;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_TempId2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txt_SiteId;
+        private System.Windows.Forms.TextBox txt_TempId1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txt_SubscriptionId;
         private System.Windows.Forms.Label label12;
@@ -881,6 +956,12 @@ namespace HandleRecurly
         private System.Windows.Forms.Button btn_CancelPlan;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Button btn_RefundInvoice;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button btn_Preview;
+        private System.Windows.Forms.Button btn_CreatePurchase;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Button btn_GetSite;
+        private System.Windows.Forms.Button btn_GetListBillingInfo;
     }
 }
 

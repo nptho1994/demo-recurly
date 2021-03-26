@@ -39,21 +39,6 @@ namespace HandleRecurly.Resource
             return billingToken.id;
         }
 
-        public string GetAccessTokenByScope(string scope)
-        {
-            var client = new RestClient(SettingRecurly.EZYVET_URL_GETTOKEN);
-            client.Timeout = -1;
-            var request = new RestRequest(Method.POST);
-            request.AddHeader("Content-Type", SettingRecurly.EZYVET_HEADER_CONTENT_TYPE);
-            request.AddParameter("partner_id", SettingRecurly.EZYVET_PARTNER_ID);
-            request.AddParameter("client_id", SettingRecurly.EZYVET_CLIENT_ID);
-            request.AddParameter("client_secret", SettingRecurly.EZYVET_CLIENT_SECRET);
-            request.AddParameter("grant_type", SettingRecurly.EZYVET_GRANT_TYPE);
-            request.AddParameter("scope", scope);
-            IRestResponse response = client.Execute(request);
-            return response.Content;
-        }
-
         public string GetContact()
         {
             var client = new RestClient("https://api.trial.ezyvet.com/v1/contact");

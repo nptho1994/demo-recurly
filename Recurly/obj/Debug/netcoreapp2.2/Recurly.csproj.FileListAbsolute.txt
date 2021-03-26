@@ -1,9 +1,0 @@
-W:\Lập trình\Demo\HandleRecurly\Recurly\bin\Debug\netcoreapp2.2\Recurly.deps.json
-W:\Lập trình\Demo\HandleRecurly\Recurly\bin\Debug\netcoreapp2.2\Recurly.dll
-W:\Lập trình\Demo\HandleRecurly\Recurly\bin\Debug\netcoreapp2.2\Recurly.pdb
-W:\Lập trình\Demo\HandleRecurly\Recurly\obj\Debug\netcoreapp2.2\Recurly.csprojAssemblyReference.cache
-W:\Lập trình\Demo\HandleRecurly\Recurly\obj\Debug\netcoreapp2.2\Recurly.AssemblyInfoInputs.cache
-W:\Lập trình\Demo\HandleRecurly\Recurly\obj\Debug\netcoreapp2.2\Recurly.AssemblyInfo.cs
-W:\Lập trình\Demo\HandleRecurly\Recurly\obj\Debug\netcoreapp2.2\Recurly.csproj.CoreCompileInputs.cache
-W:\Lập trình\Demo\HandleRecurly\Recurly\obj\Debug\netcoreapp2.2\Recurly.dll
-W:\Lập trình\Demo\HandleRecurly\Recurly\obj\Debug\netcoreapp2.2\Recurly.pdb

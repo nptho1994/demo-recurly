@@ -10,6 +10,7 @@ namespace HandleRecurly.Resource
 {
     public class HandleAccount
     {
+        private HandleBillingInfo handleBillingInfo = new HandleBillingInfo();
         public string CreateAccountWithBillingInfo(string tokenID, string accountCode)
         {
             try
@@ -89,6 +90,7 @@ namespace HandleRecurly.Resource
                 var accountReq = new AccountCreate()
                 {
                     Code = accountCode,
+                    Email = "nptho1994@gmail.com"
                 };
                 Account account = HandleClient.client.CreateAccount(accountReq);
                 return $"Created account {account.Code}";
@@ -175,30 +177,28 @@ namespace HandleRecurly.Resource
 
         }
 
-        public string UpdateAccount(string accountId, string tokenID)
+        public string UpdateAccount(string accountId, string tokenId)
         {
             try
             {
                 string index = DateTime.Now.ToString("MMddHHmm", CultureInfo.InvariantCulture);
                 var accountReq = new AccountUpdate()
                 {
-                    FirstName = "Aaron",
-                    LastName = "Du Monde",
-                    BillingInfo = new BillingInfoCreate
+                    BillingInfo = new BillingInfoCreate()
                     {
-                        TokenId = tokenID
+                        TokenId = tokenId
                     },
-                    CustomFields = new List<CustomField>()
+                    CustomFields = new List<CustomField>
                     {
                         new CustomField()
                         {
                             Name = "Test_Pet",
-                            Value = index
+                            Value = "Test" + index
                         }
                     }
                 };
                 Account account = HandleClient.client.UpdateAccount(accountId, accountReq);
-                return account.FirstName;
+                return account.Id;
             }
             catch (Recurly.Errors.Validation ex)
             {
