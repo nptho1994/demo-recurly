@@ -32,7 +32,7 @@ namespace HandleEzyVet.Resource
             request.AddHeader("Authorization", "Bearer " + accessToken);
 			WellnessPlan wellnessPlan = new WellnessPlan();
             string index = DateTime.Now.ToString("MMddHHmm", CultureInfo.InvariantCulture);
-            wellnessPlan.name = "Demo" + index;
+            wellnessPlan.name = "WellnessPlan " + index;
             wellnessPlan.subscription_fee_product = 2;
 			wellnessPlan.min_cycle_qty_on_signup = 1;
 			wellnessPlan.cancellation_product = 2;

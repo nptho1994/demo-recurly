@@ -15,5 +15,11 @@ namespace HandleEzyVet.Config
         public static string EZYVET_CLIENT_ID = "efb322a7cd1ab342e6ea30b2af8c0399";
         public static string EZYVET_CLIENT_SECRET = "$2y$10$Fqa0d8UhYkAJL2V16OqqqOPpvhj0Gah24r0M7dR8FPho7mc3OEpBi";
         public static string EZYVET_GRANT_TYPE = "client_credentials";
+
+        public static long MillisecondsTimestamp(this DateTime date)
+        {
+            DateTime baseDate = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+            return (long)(date.ToUniversalTime() - baseDate).TotalMilliseconds;
+        }
     }
 }

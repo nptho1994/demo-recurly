@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using RestSharp;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,9 +12,15 @@ namespace HandleEzyVet.Resource
 {
     public class HandleAnimal
     {
-        public string Fetch()
+        public string Fetch(string accessToken, string Id)
         {
-            return string.Empty;
+            var client = new RestClient("https://api.trial.ezyvet.com/v1/animal");
+            client.Timeout = -1;
+            var request = new RestRequest(Method.GET);
+            if (!string.IsNullOrWhiteSpace(Id)) request.AddParameter("id", Id);
+            request.AddHeader("Authorization", "Bearer " + accessToken);
+            IRestResponse response = client.Execute(request);
+            return response.Content;
         }
 
         public string Create(string accessToken, string contactId)
@@ -24,9 +31,10 @@ namespace HandleEzyVet.Resource
 			request.AddHeader("Authorization", "Bearer " + accessToken);
 			request.AddHeader("Content-Type", "application/json");
 
-			Animal animal = new Animal();
+            string index = DateTime.Now.ToString("MMddHHmm", CultureInfo.InvariantCulture);
+            Animal animal = new Animal();
             animal.contact_id = contactId;
-            animal.name = "Dog";
+            animal.name = "Animal " + index;
             animal.sex_id = "1";
             animal.animalcolour_id = "1";
             animal.species_id = "1";

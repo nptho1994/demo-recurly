@@ -25,7 +25,7 @@ namespace HandleEzyVet.Model
         public int? wellness_plan { get; set; }
         public int? animal_id { get; set; }
         public bool renew_when_expired { get; set; }
-        public int? start_date { get; set; }
+        public long? start_date { get; set; }
         public int? end_date { get; set; }
         public string status { get; set; }
         public int? billing_interval { get; set; }

@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="Model\Address.cs" />
     <Compile Include="Model\Animal.cs" />
+    <Compile Include="Model\AppointmentV2.cs" />
     <Compile Include="Model\Contact.cs" />
     <Compile Include="Model\EzyVetConfig.cs" />
     <Compile Include="Model\WellnessPlan.cs" />
@@ -76,8 +77,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource\CheckFunction.cs" />
+    <Compile Include="Resource\FetchDataEzyVet.cs" />
     <Compile Include="Resource\HandelWellnessPlanMembership.cs" />
     <Compile Include="Resource\HandleAnimal.cs" />
+    <Compile Include="Resource\HandleAppointmentV2.cs" />
     <Compile Include="Resource\HandleConnection.cs" />
     <Compile Include="Resource\HandleContact.cs" />
     <Compile Include="Resource\HandleWellnessPlan.cs" />
