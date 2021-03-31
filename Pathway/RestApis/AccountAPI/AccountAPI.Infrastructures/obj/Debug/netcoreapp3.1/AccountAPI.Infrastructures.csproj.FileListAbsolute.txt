@@ -1,0 +1,15 @@
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Infrastructures\bin\Debug\netcoreapp3.1\AccountAPI.Infrastructures.deps.json
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Infrastructures\bin\Debug\netcoreapp3.1\AccountAPI.Infrastructures.runtimeconfig.json
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Infrastructures\bin\Debug\netcoreapp3.1\AccountAPI.Infrastructures.runtimeconfig.dev.json
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Infrastructures\bin\Debug\netcoreapp3.1\AccountAPI.Infrastructures.dll
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Infrastructures\bin\Debug\netcoreapp3.1\AccountAPI.Infrastructures.pdb
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Infrastructures\bin\Debug\netcoreapp3.1\AccountAPI.Core.dll
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Infrastructures\bin\Debug\netcoreapp3.1\AccountAPI.Core.pdb
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Infrastructures\obj\Debug\netcoreapp3.1\AccountAPI.Infrastructures.csprojAssemblyReference.cache
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Infrastructures\obj\Debug\netcoreapp3.1\AccountAPI.Infrastructures.AssemblyInfoInputs.cache
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Infrastructures\obj\Debug\netcoreapp3.1\AccountAPI.Infrastructures.AssemblyInfo.cs
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Infrastructures\obj\Debug\netcoreapp3.1\AccountAPI.Infrastructures.csproj.CoreCompileInputs.cache
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Infrastructures\obj\Debug\netcoreapp3.1\AccountAPI.Infrastructures.csproj.CopyComplete
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Infrastructures\obj\Debug\netcoreapp3.1\AccountAPI.Infrastructures.dll
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Infrastructures\obj\Debug\netcoreapp3.1\AccountAPI.Infrastructures.pdb
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Infrastructures\obj\Debug\netcoreapp3.1\AccountAPI.Infrastructures.genruntimeconfig.cache

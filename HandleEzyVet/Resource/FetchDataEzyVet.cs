@@ -15,17 +15,21 @@ namespace HandleEzyVet.Resource
 			client.Timeout = -1;
 			var request = new RestRequest(Method.GET);
 			if (!string.IsNullOrWhiteSpace(Id)) request.AddParameter("id", Id);
+			request.AddParameter("limit", 200);
+			request.AddParameter("name", "Jonathan Kilgus (Head Office) CS");
 			request.AddHeader("Authorization", "Bearer " + accessToken);
 			IRestResponse response = client.Execute(request);
 			return response.Content;
 		}
 
-		public string FetchResource(string accessToken, string Id)
+		public string FetchResource(string accessToken, string Id, string ownership_id)
 		{
 			var client = new RestClient("https://api.trial.ezyvet.com/v1/resource");
 			client.Timeout = -1;
 			var request = new RestRequest(Method.GET);
 			if (!string.IsNullOrWhiteSpace(Id)) request.AddParameter("id", Id);
+			if (!string.IsNullOrWhiteSpace(ownership_id))  request.AddParameter("ownership_id", ownership_id);	
+			request.AddParameter("limit", 200);
 			request.AddHeader("Authorization", "Bearer " + accessToken);
 			IRestResponse response = client.Execute(request);
 			return response.Content;

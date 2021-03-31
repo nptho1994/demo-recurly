@@ -1,0 +1,9 @@
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Core\bin\Debug\netstandard2.0\AccountAPI.Core.deps.json
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Core\bin\Debug\netstandard2.0\AccountAPI.Core.dll
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Core\bin\Debug\netstandard2.0\AccountAPI.Core.pdb
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Core\obj\Debug\netstandard2.0\AccountAPI.Core.AssemblyInfoInputs.cache
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Core\obj\Debug\netstandard2.0\AccountAPI.Core.AssemblyInfo.cs
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Core\obj\Debug\netstandard2.0\AccountAPI.Core.csproj.CoreCompileInputs.cache
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Core\obj\Debug\netstandard2.0\AccountAPI.Core.dll
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Core\obj\Debug\netstandard2.0\AccountAPI.Core.pdb
+C:\Pathway\RestApis\AccountAPI\AccountAPI.Core\obj\Debug\netstandard2.0\AccountAPI.Core.csprojAssemblyReference.cache

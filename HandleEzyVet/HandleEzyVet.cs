@@ -159,7 +159,7 @@ namespace HandleEzyVet
 
         private void btn_FetchResource_Click(object sender, EventArgs e)
         {
-            rtb_ShowEzyVetInfo.Text = fetchDataEzyVet.FetchResource(txt_TokenAccess.Text, txt_ResourceId.Text);
+            rtb_ShowEzyVetInfo.Text = fetchDataEzyVet.FetchResource(txt_TokenAccess.Text, txt_ResourceId.Text, txt_SeparationId.Text);
         }
 
         private void btn_FetchAnimal_Click(object sender, EventArgs e)
